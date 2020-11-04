@@ -10,15 +10,15 @@ namespace Time_Blast
     {
         public static Boolean moveUp, moveDown, moveLeft, moveRight;
 
-        public  int heroX, heroY, heroSpeed, heroHealth;
 
-        public Hero(int _heroX, int _heroY, int _heroSpeed, int _health)
+        public static int x, y, heroSpeed, heroHealth;
+
+        public Hero(int _x, int _y, int _heroSpeed, int _health)
         {
-            heroX = _heroX;
-            heroY = _heroY;
+            x = _x;
+            y = _y;
             heroSpeed = _heroSpeed;
             heroHealth = _health;
-
 
         }
 

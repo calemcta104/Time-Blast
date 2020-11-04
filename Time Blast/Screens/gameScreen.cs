@@ -13,43 +13,51 @@ namespace Time_Blast
     public partial class gameScreen : UserControl
     {
         #region declaring variables
+        //booleans
         Boolean wKeyDown, aKeyDown, sKeyDown, dKeyDown, wildWestMode, futureMode, pirateMode;
 
+        //brushes
         SolidBrush heroBrush = new SolidBrush(Color.Red);
 
-        List<Hero> heroList = new List<Hero>();
+        //lists
+        //List<Hero> heroList = new List<Hero>();
 
-        Hero hero1;
+
+        //hero variables
+
         int heroSize = 20;
         int heroSpeed = 7;
 
+        //health
         int playerHealth = 8;
         int enemyHealth = 3;
 
-#endregion
-        private void gameTimer_Tick(object sender, EventArgs e)
-        {
-            Rectangle heroRec = new Rectangle(heroList[0].heroX, heroList[0].heroY, heroSize, heroSize);
-
-            Refresh();
-        }
-
-
-        private void gameScreen_Paint(object sender, PaintEventArgs e)
-        {
-            foreach( Hero h in heroList)
-            {
-                e.Graphics.FillRectangle(heroBrush, h.heroX, h.heroY, heroSize, heroSize);
-            }
-        }
-        
+        #endregion
 
 
         public gameScreen()
         {
             InitializeComponent();
-            IanMethod();
-            OnStart();
+            //IanMethod();
+            //OnStart();
+        }
+
+        public void OnStart()
+        {
+            //Hero.x = 200;
+            Hero.y = 200;
+
+            Hero hero1 = new Hero(Hero.x, Hero.y, heroSpeed, heroSize);
+            //heroList.Add(hero1);
+        }
+
+        
+
+        private void gameTimer_Tick(object sender, EventArgs e)
+        {
+            //Rectangle heroRec = new Rectangle(Hero.x, Hero.y, heroSize, heroSize);
+
+            Refresh();
         }
 
 
@@ -89,19 +97,6 @@ namespace Time_Blast
                     break;
             }
         }
-
-
-        public void OnStart()
-        {
-            int heroX = this.Width / 2- heroSize;
-            int heroY = this.Height / 2 - heroSize;
-            hero1 = new Hero(heroX, heroY, heroSpeed, heroSize);
-            heroList.Add(hero1);
-        }
-
-       
-
-
         public void IanMethod()
         {
 
@@ -109,6 +104,11 @@ namespace Time_Blast
         public void CalemMethod()
         {
             
+        }
+        private void gameScreen_Paint(object sender, PaintEventArgs e)
+        {
+            //e.Graphics.FillRectangle(heroBrush, Hero.x, Hero.y, heroSize, heroSize);
+            e.Graphics.FillRectangle(heroBrush, 400, 300, 20, 20);
         }
 
     }
