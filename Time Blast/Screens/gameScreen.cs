@@ -14,7 +14,7 @@ namespace Time_Blast
     {
         #region declaring variables
         //booleans
-        Boolean wKeyDown, aKeyDown, sKeyDown, dKeyDown, wildWestMode, futureMode, pirateMode;
+        public static Boolean wKeyDown, aKeyDown, sKeyDown, dKeyDown, wildWestMode, futureMode, pirateMode;
 
         //brushes
         SolidBrush heroBrush = new SolidBrush(Color.Red);
@@ -38,8 +38,8 @@ namespace Time_Blast
         public gameScreen()
         {
             InitializeComponent();
-            //IanMethod();
-            //OnStart();
+            IanMethod();
+            OnStart();
         }
 
         public void OnStart()
@@ -47,7 +47,7 @@ namespace Time_Blast
             //Hero.x = 200;
             Hero.y = 200;
 
-            Hero hero1 = new Hero(Hero.x, Hero.y, heroSpeed, heroSize);
+            Hero hero1 = new Hero(Hero.x, Hero.y, heroSize);
             //heroList.Add(hero1);
         }
 
@@ -56,6 +56,10 @@ namespace Time_Blast
         private void gameTimer_Tick(object sender, EventArgs e)
         {
             //Rectangle heroRec = new Rectangle(Hero.x, Hero.y, heroSize, heroSize);
+
+
+            Hero.Move(heroSpeed, wKeyDown, sKeyDown, aKeyDown, dKeyDown);
+            
 
             Refresh();
         }
@@ -108,7 +112,7 @@ namespace Time_Blast
         private void gameScreen_Paint(object sender, PaintEventArgs e)
         {
             //e.Graphics.FillRectangle(heroBrush, Hero.x, Hero.y, heroSize, heroSize);
-            e.Graphics.FillRectangle(heroBrush, 400, 300, 20, 20);
+            e.Graphics.FillRectangle(heroBrush,Hero.x, Hero.y, 20, 20);
         }
 
     }
