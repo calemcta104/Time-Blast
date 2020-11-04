@@ -24,10 +24,10 @@ namespace Time_Blast
             Form f = this.FindForm();
             f.Controls.Remove(this);
 
+
             themeScreen ts = new themeScreen();
             f.Controls.Add(ts);
             ts.Focus();
-
 
         }
 
