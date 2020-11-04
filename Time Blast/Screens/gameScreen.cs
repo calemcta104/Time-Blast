@@ -14,7 +14,9 @@ namespace Time_Blast
     {
         #region declaring variables
         //booleans
-        public static Boolean wKeyDown, aKeyDown, sKeyDown, dKeyDown, wildWestMode, futureMode, pirateMode;
+
+        public static Boolean wKeyDown, aKeyDown, sKeyDown, dKeyDown;
+
 
         //brushes
         SolidBrush heroBrush = new SolidBrush(Color.Red);
@@ -44,7 +46,7 @@ namespace Time_Blast
 
         public void OnStart()
         {
-            //Hero.x = 200;
+            Hero.x = 200;
             Hero.y = 200;
 
             Hero hero1 = new Hero(Hero.x, Hero.y, heroSize);
@@ -62,6 +64,8 @@ namespace Time_Blast
             
 
             Refresh();
+
+
         }
 
 

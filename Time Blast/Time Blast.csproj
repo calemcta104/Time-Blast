@@ -69,6 +69,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="themeScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="themeScreen.Designer.cs">
+      <DependentUpon>themeScreen.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,7 +92,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="themeScreen.resx">
+      <DependentUpon>themeScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,6 +109,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\futureLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PirateLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WWLogoResize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wildwestLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WWResize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\futureResize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PirateResize %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pirateResize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\piratebigger.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
