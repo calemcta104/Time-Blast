@@ -42,7 +42,7 @@
             this.themeChooseLabel.ForeColor = System.Drawing.Color.White;
             this.themeChooseLabel.Location = new System.Drawing.Point(70, 80);
             this.themeChooseLabel.Name = "themeChooseLabel";
-            this.themeChooseLabel.Size = new System.Drawing.Size(706, 63);
+            this.themeChooseLabel.Size = new System.Drawing.Size(692, 63);
             this.themeChooseLabel.TabIndex = 3;
             this.themeChooseLabel.Text = "CHOOSE YOUR THEME:";
             // 
@@ -50,9 +50,9 @@
             // 
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backButton.Image = global::Time_Blast.Properties.Resources.exitButton;
-            this.backButton.Location = new System.Drawing.Point(686, 534);
+            this.backButton.Location = new System.Drawing.Point(625, 494);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(146, 88);
+            this.backButton.Size = new System.Drawing.Size(187, 88);
             this.backButton.TabIndex = 4;
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
@@ -65,9 +65,9 @@
             this.pirateButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
             this.pirateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pirateButton.Image = global::Time_Blast.Properties.Resources.piratebigger;
-            this.pirateButton.Location = new System.Drawing.Point(286, 437);
+            this.pirateButton.Location = new System.Drawing.Point(286, 399);
             this.pirateButton.Name = "pirateButton";
-            this.pirateButton.Size = new System.Drawing.Size(285, 166);
+            this.pirateButton.Size = new System.Drawing.Size(285, 159);
             this.pirateButton.TabIndex = 2;
             this.pirateButton.UseVisualStyleBackColor = false;
             this.pirateButton.Click += new System.EventHandler(this.pirateButton_Click);
@@ -80,9 +80,9 @@
             this.futureButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.futureButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.futureButton.Image = global::Time_Blast.Properties.Resources.futureResize;
-            this.futureButton.Location = new System.Drawing.Point(481, 201);
+            this.futureButton.Location = new System.Drawing.Point(476, 201);
             this.futureButton.Name = "futureButton";
-            this.futureButton.Size = new System.Drawing.Size(286, 143);
+            this.futureButton.Size = new System.Drawing.Size(286, 159);
             this.futureButton.TabIndex = 1;
             this.futureButton.UseVisualStyleBackColor = false;
             this.futureButton.Click += new System.EventHandler(this.futureButton_Click);
@@ -96,9 +96,9 @@
             this.wildWestButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Khaki;
             this.wildWestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wildWestButton.Image = global::Time_Blast.Properties.Resources.WWResize;
-            this.wildWestButton.Location = new System.Drawing.Point(60, 201);
+            this.wildWestButton.Location = new System.Drawing.Point(79, 201);
             this.wildWestButton.Name = "wildWestButton";
-            this.wildWestButton.Size = new System.Drawing.Size(287, 160);
+            this.wildWestButton.Size = new System.Drawing.Size(287, 159);
             this.wildWestButton.TabIndex = 0;
             this.wildWestButton.UseVisualStyleBackColor = false;
             this.wildWestButton.Click += new System.EventHandler(this.wildWestButton_Click);
