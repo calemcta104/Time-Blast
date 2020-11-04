@@ -34,6 +34,7 @@
             // 
             // gameTimer
             // 
+            this.gameTimer.Enabled = true;
             this.gameTimer.Interval = 16;
             this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
             // 
@@ -41,10 +42,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "gameScreen";
             this.Size = new System.Drawing.Size(675, 569);
-            this.Load += new System.EventHandler(this.gameScreen_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.gameScreen_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gameScreen_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gameScreen_KeyUp);

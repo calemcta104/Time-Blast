@@ -19,20 +19,12 @@ namespace Time_Blast
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Create an instance of the gameScreen 
-
-            gameScreen gs = new gameScreen();
-
-
-
-            // Add the User Control to the Form 
-
-            this.Controls.Add(gs);
-
             Form f = this.FindForm();
-
             f.Controls.Remove(this);
 
+            gameScreen gs = new gameScreen();
+            f.Controls.Add(gs);
+            gs.Focus();
 
         }
 

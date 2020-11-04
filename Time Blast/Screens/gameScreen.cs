@@ -19,6 +19,9 @@ namespace Time_Blast
 
         List<Hero> heroList = new List<Hero>();
 
+        Hero hero1;
+        int heroSize = 20;
+        int heroSpeed = 7;
 
         int playerHealth = 8;
         int enemyHealth = 3;
@@ -26,12 +29,18 @@ namespace Time_Blast
 #endregion
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            Rectangle heroRec = new Rectangle(Hero.heroX, Hero.heroY, Hero.heroSize, Hero.heroSize);
+            Rectangle heroRec = new Rectangle(heroList[0].heroX, heroList[0].heroY, heroSize, heroSize);
+
+            Refresh();
         }
+
 
         private void gameScreen_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.FillRectangle(heroBrush, Hero.heroX, Hero.heroY, Hero.heroSize, Hero.heroSize);
+            foreach( Hero h in heroList)
+            {
+                e.Graphics.FillRectangle(heroBrush, h.heroX, h.heroY, heroSize, heroSize);
+            }
         }
         
 
@@ -84,13 +93,13 @@ namespace Time_Blast
 
         public void OnStart()
         {
-
+            int heroX = this.Width / 2- heroSize;
+            int heroY = this.Height / 2 - heroSize;
+            hero1 = new Hero(heroX, heroY, heroSpeed, heroSize);
+            heroList.Add(hero1);
         }
 
-        private void gameScreen_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
 
         public void IanMethod()
