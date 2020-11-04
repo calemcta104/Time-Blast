@@ -45,6 +45,7 @@
             this.Name = "gameScreen";
             this.Size = new System.Drawing.Size(900, 700);
             this.Load += new System.EventHandler(this.gameScreen_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.gameScreen_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gameScreen_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gameScreen_KeyUp);
             this.ResumeLayout(false);
