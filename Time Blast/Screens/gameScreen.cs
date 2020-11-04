@@ -93,12 +93,6 @@ namespace Time_Blast
         }
 
 
-        private void gameTimer_Tick(object sender, EventArgs e)
-        {
-
-        }
-
-
         public void IanMethod()
         {
 
@@ -106,12 +100,6 @@ namespace Time_Blast
         public void CalemMethod()
         {
             
-        }
-
-
-        private void gameScreen_Paint(object sender, PaintEventArgs e)
-        {
-            e.Graphics.FillRectangle
         }
 
     }
