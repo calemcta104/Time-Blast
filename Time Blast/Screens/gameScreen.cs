@@ -13,30 +13,51 @@ namespace Time_Blast
     public partial class gameScreen : UserControl
     {
         #region declaring variables
+        //booleans
         Boolean wKeyDown, aKeyDown, sKeyDown, dKeyDown, wildWestMode, futureMode, pirateMode;
 
+        //brushes
         SolidBrush heroBrush = new SolidBrush(Color.Red);
 
-        List<Hero> heroList = new List<Hero>();
+        //lists
+        //List<Hero> heroList = new List<Hero>();
 
+        //hero variables
+        int heroSize = 20;
+        int heroSpeed = 7;
 
+        //health
         int playerHealth = 8;
         int enemyHealth = 3;
 
-#endregion
-        
+        #endregion
+
 
         public gameScreen()
         {
             InitializeComponent();
-            IanMethod();
-            OnStart();
+            //IanMethod();
+            //OnStart();
         }
+
+        public void OnStart()
+        {
+            //Hero.x = 200;
+            Hero.y = 200;
+
+            Hero hero1 = new Hero(Hero.x, Hero.y, heroSpeed, heroSize);
+            //heroList.Add(hero1);
+        }
+
+        
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            Rectangle heroRec = new Rectangle(Hero.heroX, Hero.heroY, Hero.heroSize, Hero.heroSize);
+            //Rectangle heroRec = new Rectangle(Hero.x, Hero.y, heroSize, heroSize);
+
+            Refresh();
         }
+
 
         private void gameScreen_KeyUp(object sender, KeyEventArgs e)
         {
@@ -76,16 +97,6 @@ namespace Time_Blast
         }
 
 
-        public void OnStart()
-        {
-
-        }
-
-        private void gameScreen_Load(object sender, EventArgs e)
-        {
-
-        }
-
         public void IanMethod()
         {
 
@@ -95,9 +106,11 @@ namespace Time_Blast
             
         }
 
+
         private void gameScreen_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.FillRectangle(heroBrush, Hero.heroX, Hero.heroY, Hero.heroSize, Hero.heroSize);
+            //e.Graphics.FillRectangle(heroBrush, Hero.x, Hero.y, heroSize, heroSize);
+            e.Graphics.FillRectangle(heroBrush, 400, 300, 20, 20);
         }
 
     }
