@@ -12,13 +12,18 @@ namespace Time_Blast
 {
     public partial class gameScreen : UserControl
     {
-        Boolean wKeyDown, aKeyDown, sKeyDown, dKeyDown;
+        Boolean wKeyDown, aKeyDown, sKeyDown, dKeyDown, wildWestMode, futureMode, pirateMode;
 
         SolidBrush heroBrush = new SolidBrush(Color.Red);
 
 
         int playerHealth = 8;
         int enemyHealth = 3;
+
+        private void gameTimer_Tick(object sender, EventArgs e)
+        {
+
+        }
 
         public gameScreen()
         {
@@ -45,22 +50,6 @@ namespace Time_Blast
                     break;
             }
         }
-
-        private void gameScreen_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        public void IanMethod()
-        {
-
-        }
-
-        public void OnStart()
-        {
-
-        }
-
         private void gameScreen_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
@@ -79,5 +68,23 @@ namespace Time_Blast
                     break;
             }
         }
+
+
+        private void gameScreen_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public void IanMethod()
+        {
+
+        }
+
+        public void OnStart()
+        {
+
+        }
+
+       
     }
 }
