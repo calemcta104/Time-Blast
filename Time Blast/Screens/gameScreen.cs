@@ -17,10 +17,24 @@ namespace Time_Blast
 
         SolidBrush heroBrush = new SolidBrush(Color.Red);
 
+        List<Hero> heroList = new List<Hero>();
+
 
         int playerHealth = 8;
         int enemyHealth = 3;
-        #endregion
+
+#endregion
+        private void gameTimer_Tick(object sender, EventArgs e)
+        {
+            Rectangle heroRec = new Rectangle(Hero.heroX, Hero.heroY, Hero.heroSize, Hero.heroSize);
+        }
+
+        private void gameScreen_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.FillRectangle(heroBrush, Hero.heroX, Hero.heroY, Hero.heroSize, Hero.heroSize);
+        }
+        
+
 
         public gameScreen()
         {
@@ -91,7 +105,7 @@ namespace Time_Blast
         }
         public void CalemMethod()
         {
-
+            
         }
 
 
