@@ -12,6 +12,9 @@ namespace Time_Blast
 {
     public partial class Form1 : Form
     {
+        //global variables for theme modes
+        public static Boolean wildWestMode, futureMode, pirateMode;
+
         public Form1()
         {
             InitializeComponent();

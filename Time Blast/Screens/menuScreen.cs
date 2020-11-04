@@ -24,9 +24,9 @@ namespace Time_Blast
             Form f = this.FindForm();
             f.Controls.Remove(this);
 
-            gameScreen gs = new gameScreen();
-            f.Controls.Add(gs);
-            gs.Focus();
+            themeScreen ts = new themeScreen();
+            f.Controls.Add(ts);
+            ts.Focus();
 
 
         }
@@ -34,6 +34,11 @@ namespace Time_Blast
         private void menuScreen_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

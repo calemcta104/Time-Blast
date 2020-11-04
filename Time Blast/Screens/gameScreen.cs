@@ -14,7 +14,7 @@ namespace Time_Blast
     {
         #region declaring variables
         //booleans
-        Boolean wKeyDown, aKeyDown, sKeyDown, dKeyDown, wildWestMode, futureMode, pirateMode;
+        Boolean wKeyDown, aKeyDown, sKeyDown, dKeyDown;
 
         //brushes
         SolidBrush heroBrush = new SolidBrush(Color.Red);
@@ -36,13 +36,13 @@ namespace Time_Blast
         public gameScreen()
         {
             InitializeComponent();
-            //IanMethod();
-            //OnStart();
+            IanMethod();
+            OnStart();
         }
 
         public void OnStart()
         {
-            //Hero.x = 200;
+            Hero.x = 200;
             Hero.y = 200;
 
             Hero hero1 = new Hero(Hero.x, Hero.y, heroSpeed, heroSize);
@@ -56,6 +56,8 @@ namespace Time_Blast
             //Rectangle heroRec = new Rectangle(Hero.x, Hero.y, heroSize, heroSize);
 
             Refresh();
+
+
         }
 
 
