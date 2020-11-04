@@ -10,7 +10,7 @@ namespace Time_Blast
     {
         int bulletX, bulletY, bulletSize, bulletSpeed;
 
-        public void bullet(int _bulletX, int _bulletY, int _bulletSpeed, int _bulletSize)
+        public Bullet(int _bulletX, int _bulletY, int _bulletSpeed, int _bulletSize)
         {
 
         }
