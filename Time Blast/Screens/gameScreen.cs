@@ -24,17 +24,7 @@ namespace Time_Blast
         int enemyHealth = 3;
 
 #endregion
-        private void gameTimer_Tick(object sender, EventArgs e)
-        {
-            Rectangle heroRec = new Rectangle(Hero.heroX, Hero.heroY, Hero.heroSize, Hero.heroSize);
-        }
-
-        private void gameScreen_Paint(object sender, PaintEventArgs e)
-        {
-            e.Graphics.FillRectangle(heroBrush, Hero.heroX, Hero.heroY, Hero.heroSize, Hero.heroSize);
-        }
         
-
 
         public gameScreen()
         {
@@ -43,6 +33,10 @@ namespace Time_Blast
             OnStart();
         }
 
+        private void gameTimer_Tick(object sender, EventArgs e)
+        {
+            Rectangle heroRec = new Rectangle(Hero.heroX, Hero.heroY, Hero.heroSize, Hero.heroSize);
+        }
 
         private void gameScreen_KeyUp(object sender, KeyEventArgs e)
         {
@@ -92,13 +86,6 @@ namespace Time_Blast
 
         }
 
-
-        private void gameTimer_Tick(object sender, EventArgs e)
-        {
-
-        }
-
-
         public void IanMethod()
         {
 
@@ -108,10 +95,9 @@ namespace Time_Blast
             
         }
 
-
         private void gameScreen_Paint(object sender, PaintEventArgs e)
         {
-            //e.Graphics.FillRectangle
+            e.Graphics.FillRectangle(heroBrush, Hero.heroX, Hero.heroY, Hero.heroSize, Hero.heroSize);
         }
 
     }
