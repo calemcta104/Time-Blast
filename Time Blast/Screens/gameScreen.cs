@@ -97,7 +97,7 @@ namespace Time_Blast
 
         private void gameScreen_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.FillRectangle
+            //e.Graphics.FillRectangle
         }
 
     }
