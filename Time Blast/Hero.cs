@@ -8,7 +8,7 @@ namespace Time_Blast
 {
     class Hero
     {
-        Boolean moveUp, moveDown, moveLeft, moveRight;
+        public static Boolean moveUp, moveDown, moveLeft, moveRight;
 
         public static int heroX, heroY, heroSpeed, heroHealth, heroSize;
 

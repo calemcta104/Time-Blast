@@ -14,5 +14,17 @@ namespace Time_Blast
         {
 
         }
+
+        public void WildWestShoot(int _bulletX, int _bulletY, int _bulletSpeed, int _bulletSize)
+        { }
+
+        public void FutureShoot(int _bulletX, int _bulletY, int _bulletSpeed, int _bulletSize)
+        { }
+
+        public void PirateShoot(int _bulletX, int _bulletY, int _bulletSpeed, int _bulletSize)
+        { }
+
+        public void EnemyShoot(int _bulletX, int _bulletY, int _bulletSpeed, int _bulletSize)
+        { }
     }
 }

@@ -12,6 +12,7 @@ namespace Time_Blast
 {
     public partial class gameScreen : UserControl
     {
+        #region declaring variables
         Boolean wKeyDown, aKeyDown, sKeyDown, dKeyDown, wildWestMode, futureMode, pirateMode;
 
         SolidBrush heroBrush = new SolidBrush(Color.Red);
@@ -22,6 +23,7 @@ namespace Time_Blast
         int playerHealth = 8;
         int enemyHealth = 3;
 
+#endregion
         private void gameTimer_Tick(object sender, EventArgs e)
         {
             Rectangle heroRec = new Rectangle(Hero.heroX, Hero.heroY, Hero.heroSize, Hero.heroSize);
@@ -31,6 +33,8 @@ namespace Time_Blast
         {
             e.Graphics.FillRectangle(heroBrush, Hero.heroX, Hero.heroY, Hero.heroSize, Hero.heroSize);
         }
+        
+
 
         public gameScreen()
         {
@@ -38,6 +42,7 @@ namespace Time_Blast
             IanMethod();
             OnStart();
         }
+
 
         private void gameScreen_KeyUp(object sender, KeyEventArgs e)
         {
@@ -77,21 +82,37 @@ namespace Time_Blast
         }
 
 
+        public void OnStart()
+        {
+
+        }
+
         private void gameScreen_Load(object sender, EventArgs e)
         {
 
         }
 
+
+        private void gameTimer_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+
         public void IanMethod()
         {
 
         }
-
-        public void OnStart()
+        public void CalemMethod()
         {
             
         }
 
-       
+
+        private void gameScreen_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.FillRectangle
+        }
+
     }
 }
