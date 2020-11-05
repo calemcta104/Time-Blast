@@ -23,40 +23,6 @@ namespace Time_Blast
 
         public static void Move(int speed, bool moveUp, bool moveDown, bool moveLeft, bool moveRight)
         {
-            //if (moveUp)
-            //{
-            //    Hero.moveUp = true;
-            //}
-            //else if (gameScreen.aKeyDown == true)
-            //{
-            //    Hero.moveLeft = true;
-            //}
-            //else if (gameScreen.sKeyDown == true )
-            //{
-            //    Hero.moveDown = true;
-            //}
-            //else if (gameScreen.dKeyDown == true)
-            //{
-            //    Hero.moveRight = true;
-            //}
-
-
-            //if (gameScreen.wKeyDown == false)
-            //{
-            //    Hero.moveUp = false;
-            //}
-            //else if (gameScreen.aKeyDown == false)
-            //{
-            //    Hero.moveLeft = false;
-            //}
-            //else if (gameScreen.sKeyDown == false)
-            //{
-            //    Hero.moveDown = false;
-            //}
-            //else if (gameScreen.dKeyDown == false)
-            //{
-            //    Hero.moveRight = false;
-           // }
 
             if (moveUp == true && y >= 0)
             {
