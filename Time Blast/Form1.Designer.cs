@@ -37,6 +37,7 @@
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(1182, 953);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
