@@ -30,47 +30,54 @@ namespace Time_Blast
             {
                 heroImage = gameScreen.wildWestHeroUpLeft;
             }
-            if (moveUp == true && moveRight == true)
+            else if (moveUp == true && moveRight == true)
             {
                 heroImage = gameScreen.wildWestHeroUpRight;
             }
-            if (moveDown == true && moveLeft == true)
+            else if (moveDown == true && moveLeft == true)
             {
                 heroImage = gameScreen.wildWestHeroDownLeft;
             }
-            if (moveDown == true && moveRight == true)
+            else if (moveDown == true && moveRight == true)
             {
                 heroImage = gameScreen.wildWestHeroDownRight;
             }
+            else if (moveUp == true)
+            {
+                heroImage = gameScreen.wildWestHeroUp;
+            }
+            else if (moveDown == true)
+            {
+                heroImage = gameScreen.wildWestHeroDown;
+            }
+            else if (moveLeft == true)
+            {
+                heroImage = gameScreen.wildWestHeroLeft;
+            }
+            else if (moveRight == true)
+            {
+                heroImage = gameScreen.wildWestHeroRight;
+            }
+
             if (moveUp == true && y >= 0)
             {
                 y = y - speed;
-                faceUp = true;
-                faceDown = false;
-                heroImage = gameScreen.wildWestHeroUp;
             }
             if (moveDown == true && y + 50 <= 700)
             {
                 y = y + speed;
-                faceDown = true;
-                faceUp = false;
-                heroImage = gameScreen.wildWestHeroDown;
             }
             if (moveLeft == true && x >= 0)
             {
                 x = x - speed;
-                faceLeft = true;
-                faceRight = false;
-                heroImage = gameScreen.wildWestHeroLeft;
             }
             if (moveRight == true && x + 30 <= 902)
             {
                 x = x + speed;
-               faceRight = true;
-               faceLeft = false;
-                heroImage = gameScreen.wildWestHeroRight;
             }
            
+
+
         }
 
         public void Shoot(int _heroX, int _heroY/*, //bulletSize*/)
