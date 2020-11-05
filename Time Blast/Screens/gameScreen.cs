@@ -18,26 +18,27 @@ namespace Time_Blast
 
         public static Boolean wKeyDown, aKeyDown, sKeyDown, dKeyDown;
 
-        Random moveGen = new Random();
-        public static int enemyMovement;
         int counter = 0;
         
 
         //brushes
         SolidBrush heroBrush = new SolidBrush(Color.Red);
         SolidBrush enemyBrush = new SolidBrush(Color.Blue);
+        SolidBrush enemyBrush2 = new SolidBrush(Color.Green);
 
         //lists
         //List<Hero> heroList = new List<Hero>();
+        List<Enemy> enemyList = new List<Enemy>();
 
 
         //hero variables
 
         public static int heroSize = 20;
         int heroSpeed = 7;
+        int enemySpeed = 5;
 
         //health
-        int playerHealth = 8;
+        int playerHealth = 4;
         int enemyHealth = 3;
 
         #endregion
@@ -52,11 +53,20 @@ namespace Time_Blast
 
         public void OnStart()
         {
+            Enemy enemy1 = new Enemy(Enemy.x, Enemy.y, heroSize);
+            Enemy enemy2 = new Enemy(Enemy.x2, Enemy.y2, heroSize);
+            enemyList.Add(enemy1);
+            enemyList.Add(enemy2);
+
             Hero.x = 200;
             Hero.y = 200;
-            enemyMovement = moveGen.Next(1, 3);
+            Enemy.x = 400;
+            Enemy.y = 100;
+            Enemy.x2 = 100;
+            Enemy.y2 = 400;
             Hero hero1 = new Hero(Hero.x, Hero.y, heroSize);
-            Enemy enemy1 = new Enemy(Enemy.x, Enemy.y, heroSize);
+
+            
             //heroList.Add(hero1);
         }
 
@@ -66,12 +76,18 @@ namespace Time_Blast
         {
             Rectangle heroRec = new Rectangle(Hero.x, Hero.y, heroSize, heroSize);
             Rectangle enemyRec = new Rectangle(Enemy.x, Enemy.y, heroSize, heroSize);
+            Rectangle enemyRec2 = new Rectangle(Enemy.x2, Enemy.y2, heroSize, heroSize);
 
 
             Hero.Move(heroSpeed, wKeyDown, sKeyDown, aKeyDown, dKeyDown);
-            
 
-            
+            if(heroRec.IntersectsWith(enemyRec) || heroRec.IntersectsWith(enemyRec2))
+            {
+                
+                playerHealth--;
+                healthLabel.Text = $"{playerHealth}";
+            }
+           
 
             Refresh();
 
@@ -118,8 +134,8 @@ namespace Time_Blast
 
         private void enemyTimer_Tick(object sender, EventArgs e)
         { 
-           Enemy.enemyMove(heroSpeed);
-            
+           Enemy.enemyMove(enemySpeed);
+
             Refresh();
         }
 
@@ -139,6 +155,7 @@ namespace Time_Blast
             e.Graphics.FillRectangle(heroBrush,Hero.x, Hero.y, 20, 20);
             //Draws Enemy Characters
             e.Graphics.FillRectangle(enemyBrush, Enemy.x, Enemy.y, 20, 20);
+            e.Graphics.FillRectangle(enemyBrush2, Enemy.x2,Enemy.y2, 20, 20);
 
         }
 
