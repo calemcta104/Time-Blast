@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Time_Blast.Properties;
 
 namespace Time_Blast
 {
@@ -31,14 +32,14 @@ namespace Time_Blast
 
         }
 
-        private void menuScreen_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void menuScreen_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.DrawImage(Properties.Resources.titleScreen, 35, 5, 600, 215);
         }
     }
 }

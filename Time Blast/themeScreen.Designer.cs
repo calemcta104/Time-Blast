@@ -40,7 +40,7 @@
             this.themeChooseLabel.BackColor = System.Drawing.Color.Transparent;
             this.themeChooseLabel.Font = new System.Drawing.Font("OCR A Extended", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.themeChooseLabel.ForeColor = System.Drawing.Color.White;
-            this.themeChooseLabel.Location = new System.Drawing.Point(70, 80);
+            this.themeChooseLabel.Location = new System.Drawing.Point(120, 79);
             this.themeChooseLabel.Name = "themeChooseLabel";
             this.themeChooseLabel.Size = new System.Drawing.Size(692, 63);
             this.themeChooseLabel.TabIndex = 3;
@@ -49,7 +49,7 @@
             // backButton
             // 
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backButton.Image = global::Time_Blast.Properties.Resources.exitButton;
+            this.backButton.Image = global::Time_Blast.Properties.Resources.backbutton;
             this.backButton.Location = new System.Drawing.Point(625, 494);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(187, 88);

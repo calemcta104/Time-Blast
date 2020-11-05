@@ -23,7 +23,7 @@ namespace Time_Blast
             f.Controls.Remove(this);
 
             menuScreen ms = new menuScreen();
-            this.Controls.Add(ms);
+            f.Controls.Add(ms);
             ms.Focus();
         }
 

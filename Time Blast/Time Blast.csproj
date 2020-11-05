@@ -143,5 +143,11 @@
   <ItemGroup>
     <None Include="Resources\piratebigger.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\titleScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backbutton.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

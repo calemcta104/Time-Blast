@@ -137,9 +137,9 @@ namespace Time_Blast
 
             //Draws Hero Character
             e.Graphics.FillRectangle(heroBrush,Hero.x, Hero.y, 20, 20);
-
             //Draws Enemy Characters
             e.Graphics.FillRectangle(enemyBrush, Enemy.x, Enemy.y, 20, 20);
+
         }
 
     }
