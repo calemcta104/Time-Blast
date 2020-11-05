@@ -17,8 +17,19 @@ namespace Time_Blast
         {
             InitializeComponent();
         }
+        
 
-        private void button1_Click(object sender, EventArgs e)
+        private void menuScreen_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.DrawImage(Properties.Resources.titleScreen, 35, 5, 800, 355);
+        }
+
+        private void exitButton_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void PlayButton_Click(object sender, EventArgs e)
         {
             // Create an instance of the gameScreen 
             // Add the User Control to the Form 
@@ -29,17 +40,6 @@ namespace Time_Blast
             themeScreen ts = new themeScreen();
             f.Controls.Add(ts);
             ts.Focus();
-
-        }
-
-        private void exitButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void menuScreen_Paint(object sender, PaintEventArgs e)
-        {
-            e.Graphics.DrawImage(Properties.Resources.titleScreen, 35, 5, 800, 355);
         }
     }
 }

@@ -27,9 +27,24 @@ namespace Time_Blast
         SolidBrush enemyBrush2 = new SolidBrush(Color.Green);
 
         //picture variables
-        Image wildWestHero = Properties.Resources.WWHero;
-        Image futureHero = Properties.Resources.FutureHero;
-        Image pirateHero = Properties.Resources.PirtateHero;
+        #region WW hero image variables
+        public static Image wildWestHeroRight = Properties.Resources.WWHero;
+        public static Image wildWestHeroLeft = Properties.Resources.HeroLeft;
+        public static Image wildWestHeroUp = Properties.Resources.HeroUp;
+        public static Image wildWestHeroDown = Properties.Resources.HeroDown;
+        public static Image wildWestHeroUpRight = Properties.Resources.HeroUpperRight;
+        public static Image wildWestHeroUpLeft = Properties.Resources.HeroUpperLeft;
+        public static Image wildWestHeroDownLeft = Properties.Resources.HeroLowerLeft;
+        public static Image wildWestHeroDownRight = Properties.Resources.HeroLowerRight;
+
+        #endregion
+        #region Future hero image variables
+        public static Image futureHero = Properties.Resources.FutureHero;
+        #endregion
+        #region pirate hero image variables
+        public static Image pirateHero = Properties.Resources.PirtateHero;
+        #endregion
+
 
         //lists
         //List<Hero> heroList = new List<Hero>();
@@ -160,15 +175,49 @@ namespace Time_Blast
             //e.Graphics.FillRectangle(heroBrush,Hero.x, Hero.y, 20, 20);
             if (Form1.wildWestMode == true)
             {
-                e.Graphics.DrawImage(wildWestHero, Hero.x, Hero.y, heroSize, heroSize);
+                e.Graphics.DrawImage(Hero.heroImage, Hero.x, Hero.y, heroSize, heroSize);
+
+                //if (Hero.faceUp == true)
+                //{ 
+                //    e.Graphics.DrawImage(wildWestHeroUp, Hero.x, Hero.y, heroSize, heroSize);
+                //}
+                //else if (Hero.faceDown == true)
+                //{
+                //    e.Graphics.DrawImage(wildWestHeroDown, Hero.x, Hero.y, heroSize, heroSize);
+                //}
+                //else if (Hero.faceLeft == true)
+                //{
+                //    e.Graphics.DrawImage(wildWestHeroLeft, Hero.x, Hero.y, heroSize, heroSize);
+                //}
+                //else if (Hero.faceRight == true)
+                //{
+                //    e.Graphics.DrawImage(wildWestHeroRight, Hero.x, Hero.y, heroSize, heroSize);
+                //}
+                //else if (Hero.faceUp == true && Hero.faceRight == true)
+                //{
+                //    e.Graphics.DrawImage(wildWestHeroUpRight, Hero.x, Hero.y, heroSize, heroSize);
+                //}
+                //else if (Hero.faceDown == true && Hero.faceRight == true)
+                //{
+                //    e.Graphics.DrawImage(wildWestHeroDownRight, Hero.x, Hero.y, heroSize, heroSize);
+                //}
+                //else if (Hero.faceUp == true && Hero.faceLeft == true)
+                //{
+                //    e.Graphics.DrawImage(wildWestHeroUpLeft, Hero.x, Hero.y, heroSize, heroSize);
+                //}
+                //else if (Hero.faceDown == true && Hero.faceLeft == true)
+                //{
+                //    e.Graphics.DrawImage(wildWestHeroDownLeft, Hero.x, Hero.y, heroSize, heroSize);
+                //}
             }
+
             if (Form1.futureMode == true)
             {
                 e.Graphics.DrawImage(futureHero, Hero.x, Hero.y, heroSize, heroSize);
             }
             if (Form1.pirateMode == true)
             {
-                e.Graphics.DrawImage(pirateHero, Hero.x, Hero.y, heroSize, heroSize);
+                e.Graphics.DrawImage(pirateHero, Hero.x, Hero.y, heroSize, heroSize + 10);
             }
 
             //Draws Enemy Characters

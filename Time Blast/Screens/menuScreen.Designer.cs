@@ -28,60 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.exitButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.PlayButton = new System.Windows.Forms.PictureBox();
+            this.exitButton = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PlayButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitButton)).BeginInit();
             this.SuspendLayout();
+            // 
+            // PlayButton
+            // 
+            this.PlayButton.Image = global::Time_Blast.Properties.Resources.playButtonResize;
+            this.PlayButton.Location = new System.Drawing.Point(69, 793);
+            this.PlayButton.Name = "PlayButton";
+            this.PlayButton.Size = new System.Drawing.Size(228, 122);
+            this.PlayButton.TabIndex = 3;
+            this.PlayButton.TabStop = false;
+            this.PlayButton.Click += new System.EventHandler(this.PlayButton_Click);
             // 
             // exitButton
             // 
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.Image = global::Time_Blast.Properties.Resources.exitButton;
-
-            this.exitButton.Location = new System.Drawing.Point(849, 736);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(4);
-          
+            this.exitButton.Image = global::Time_Blast.Properties.Resources.exitButtonResize;
+            this.exitButton.Location = new System.Drawing.Point(919, 793);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(158, 82);
-            this.exitButton.TabIndex = 1;
-            this.exitButton.UseVisualStyleBackColor = true;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::Time_Blast.Properties.Resources.playButton;
-
-            this.button1.Location = new System.Drawing.Point(181, 747);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-          
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 73);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.exitButton.Size = new System.Drawing.Size(227, 124);
+            this.exitButton.TabIndex = 2;
+            this.exitButton.TabStop = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click_1);
             // 
             // menuScreen
             // 
-
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-          
             this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.PlayButton);
             this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "menuScreen";
-
             this.Size = new System.Drawing.Size(1200, 1000);
-
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.menuScreen_Paint);
+            ((System.ComponentModel.ISupportInitialize)(this.PlayButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitButton)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.PictureBox exitButton;
+        private System.Windows.Forms.PictureBox PlayButton;
     }
 }
