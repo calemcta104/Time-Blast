@@ -35,7 +35,7 @@ namespace Time_Blast
                 //tries to match Y level
                 if (enemyMovement == 1)
                 {
-                   if (Hero.y  < y)
+                   if (Hero.y < y)
                     {
                         y = y - speed;
                     }
@@ -60,7 +60,7 @@ namespace Time_Blast
             //tries to match Y level
             if (enemyMovement == 1)
             {
-                if (Hero.y < y2)
+                if (Hero.y < y2 - 25)
                 {
                     y2 = y2 - speed - 2;
                 }
@@ -72,7 +72,7 @@ namespace Time_Blast
             //Tries to match X level
             else if (enemyMovement == 2)
             {
-                if (Hero.x  < x2)
+                if (Hero.x < x2 - 20)
                 {
                     x2 = x2 - speed - 2;
                 }

@@ -19,12 +19,7 @@ namespace Time_Blast
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            Form f = this.FindForm();
-            f.Controls.Remove(this);
-
-            menuScreen ms = new menuScreen();
-            f.Controls.Add(ms);
-            ms.Focus();
+            
         }
 
         private void pirateButton_Click(object sender, EventArgs e)
@@ -67,6 +62,16 @@ namespace Time_Blast
             Form1.pirateMode = false;
             Form1.futureMode = false;
             Form1.wildWestMode = true;
+        }
+
+        private void BackButton_Click_1(object sender, EventArgs e)
+        {
+            Form f = this.FindForm();
+            f.Controls.Remove(this);
+
+            menuScreen ms = new menuScreen();
+            f.Controls.Add(ms);
+            ms.Focus();
         }
     }
 }

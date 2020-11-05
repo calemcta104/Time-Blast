@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.themeChooseLabel = new System.Windows.Forms.Label();
-            this.backButton = new System.Windows.Forms.Button();
             this.pirateButton = new System.Windows.Forms.Button();
             this.futureButton = new System.Windows.Forms.Button();
             this.wildWestButton = new System.Windows.Forms.Button();
+            this.BackButton = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.BackButton)).BeginInit();
             this.SuspendLayout();
             // 
             // themeChooseLabel
@@ -45,17 +46,6 @@
             this.themeChooseLabel.Size = new System.Drawing.Size(692, 63);
             this.themeChooseLabel.TabIndex = 3;
             this.themeChooseLabel.Text = "CHOOSE YOUR THEME:";
-            // 
-            // backButton
-            // 
-            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backButton.Image = global::Time_Blast.Properties.Resources.backbutton;
-            this.backButton.Location = new System.Drawing.Point(958, 745);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(187, 88);
-            this.backButton.TabIndex = 4;
-            this.backButton.UseVisualStyleBackColor = true;
-            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // pirateButton
             // 
@@ -103,18 +93,29 @@
             this.wildWestButton.UseVisualStyleBackColor = false;
             this.wildWestButton.Click += new System.EventHandler(this.wildWestButton_Click);
             // 
+            // BackButton
+            // 
+            this.BackButton.Image = global::Time_Blast.Properties.Resources.backButtonResize;
+            this.BackButton.Location = new System.Drawing.Point(900, 781);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(225, 120);
+            this.BackButton.TabIndex = 5;
+            this.BackButton.TabStop = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click_1);
+            // 
             // themeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Black;
-            this.Controls.Add(this.backButton);
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.themeChooseLabel);
             this.Controls.Add(this.pirateButton);
             this.Controls.Add(this.futureButton);
             this.Controls.Add(this.wildWestButton);
             this.Name = "themeScreen";
-            this.Size = new System.Drawing.Size(1200, 854);
+            this.Size = new System.Drawing.Size(1200, 1000);
+            ((System.ComponentModel.ISupportInitialize)(this.BackButton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -125,6 +126,6 @@
         private System.Windows.Forms.Button futureButton;
         private System.Windows.Forms.Button pirateButton;
         private System.Windows.Forms.Label themeChooseLabel;
-        private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.PictureBox BackButton;
     }
 }

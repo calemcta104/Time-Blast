@@ -49,15 +49,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bullet.cs" />
-    <Compile Include="Enemy.cs" />
+    <Compile Include="classes\Bullet.cs" />
+    <Compile Include="classes\Enemy.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hero.cs" />
+    <Compile Include="classes\Hero.cs" />
     <Compile Include="Screens\gameScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,6 +161,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WWHero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeroDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeroLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeroLowerLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeroLowerRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeroRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeroUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeroUpperRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeroUpperLeft.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
