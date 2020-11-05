@@ -124,17 +124,26 @@
   <data name="exitButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exitButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="FutureHero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FutureHero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="futureResize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\futureResize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="piratebigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\piratebigger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PirtateHero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PirtateHero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="playButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\playButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="titleScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\titleScreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WWHero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WWHero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WWResize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WWResize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

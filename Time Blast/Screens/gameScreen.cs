@@ -27,13 +27,18 @@ namespace Time_Blast
         SolidBrush heroBrush = new SolidBrush(Color.Red);
         SolidBrush enemyBrush = new SolidBrush(Color.Blue);
 
+        //picture variables
+        Image wildWestHero = Properties.Resources.WWHero;
+        Image futureHero = Properties.Resources.FutureHero;
+        Image pirateHero = Properties.Resources.PirtateHero;
+
         //lists
         //List<Hero> heroList = new List<Hero>();
 
 
         //hero variables
 
-        public static int heroSize = 20;
+        public static int heroSize = 50;
         int heroSpeed = 7;
 
         //health
@@ -136,7 +141,20 @@ namespace Time_Blast
            
 
             //Draws Hero Character
-            e.Graphics.FillRectangle(heroBrush,Hero.x, Hero.y, 20, 20);
+            //e.Graphics.FillRectangle(heroBrush,Hero.x, Hero.y, 20, 20);
+            if (Form1.wildWestMode == true)
+            {
+                e.Graphics.DrawImage(wildWestHero, Hero.x, Hero.y, heroSize, heroSize);
+            }
+            if (Form1.futureMode == true)
+            {
+                e.Graphics.DrawImage(futureHero, Hero.x, Hero.y, heroSize, heroSize);
+            }
+            if (Form1.pirateMode == true)
+            {
+                e.Graphics.DrawImage(pirateHero, Hero.x, Hero.y, heroSize, heroSize);
+            }
+
             //Draws Enemy Characters
             e.Graphics.FillRectangle(enemyBrush, Enemy.x, Enemy.y, 20, 20);
 

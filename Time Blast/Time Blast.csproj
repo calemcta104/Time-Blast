@@ -69,10 +69,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="themeScreen.cs">
+    <Compile Include="Screens\themeScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="themeScreen.Designer.cs">
+    <Compile Include="Screens\themeScreen.Designer.cs">
       <DependentUpon>themeScreen.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
@@ -94,7 +94,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="themeScreen.resx">
+    <EmbeddedResource Include="Screens\themeScreen.resx">
       <DependentUpon>themeScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -148,6 +148,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\backbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PirtateHero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FutureHero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WWHero.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

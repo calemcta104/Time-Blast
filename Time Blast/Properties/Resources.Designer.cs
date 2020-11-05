@@ -83,6 +83,16 @@ namespace Time_Blast.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FutureHero {
+            get {
+                object obj = ResourceManager.GetObject("FutureHero", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap futureResize {
             get {
                 object obj = ResourceManager.GetObject("futureResize", resourceCulture);
@@ -103,6 +113,16 @@ namespace Time_Blast.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PirtateHero {
+            get {
+                object obj = ResourceManager.GetObject("PirtateHero", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap playButton {
             get {
                 object obj = ResourceManager.GetObject("playButton", resourceCulture);
@@ -116,6 +136,16 @@ namespace Time_Blast.Properties {
         internal static System.Drawing.Bitmap titleScreen {
             get {
                 object obj = ResourceManager.GetObject("titleScreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WWHero {
+            get {
+                object obj = ResourceManager.GetObject("WWHero", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
