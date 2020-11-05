@@ -49,7 +49,7 @@
             // backButton
             // 
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backButton.Image = global::Time_Blast.Properties.Resources.exitButton;
+            this.backButton.Image = global::Time_Blast.Properties.Resources.backbutton;
             this.backButton.Location = new System.Drawing.Point(625, 494);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(187, 88);

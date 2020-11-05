@@ -117,6 +117,8 @@ namespace Time_Blast
         {
             //e.Graphics.FillRectangle(heroBrush, Hero.x, Hero.y, heroSize, heroSize);
             e.Graphics.FillRectangle(heroBrush,Hero.x, Hero.y, 20, 20);
+
+
         }
 
     }
