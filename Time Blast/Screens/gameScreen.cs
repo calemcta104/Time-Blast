@@ -25,6 +25,7 @@ namespace Time_Blast
         SolidBrush heroBrush = new SolidBrush(Color.Red);
         SolidBrush enemyBrush = new SolidBrush(Color.Blue);
         SolidBrush enemyBrush2 = new SolidBrush(Color.Green);
+        SolidBrush objectiveBrush = new SolidBrush(Color.Yellow);
 
         //picture variables
         #region WW hero image variables
@@ -97,15 +98,35 @@ namespace Time_Blast
             Rectangle heroRec = new Rectangle(Hero.x, Hero.y, heroSize, heroSize);
             Rectangle enemyRec = new Rectangle(Enemy.x, Enemy.y, heroSize, heroSize);
             Rectangle enemyRec2 = new Rectangle(Enemy.x2, Enemy.y2, heroSize, heroSize);
+            Rectangle objectiveRec = new Rectangle(600, 600, 20, 20);
 
 
             Hero.Move(heroSpeed, wKeyDown, sKeyDown, aKeyDown, dKeyDown);
-
-            if(heroRec.IntersectsWith(enemyRec) || heroRec.IntersectsWith(enemyRec2))
+            counter++;
+            if (heroRec.IntersectsWith(enemyRec) || heroRec.IntersectsWith(enemyRec2))
             {
                 
-                playerHealth--;
-                healthLabel.Text = $"{playerHealth}";
+                if (counter > 50)
+                {
+                    playerHealth--;
+                    healthLabel.Text = $"{playerHealth}";
+                    counter = 0;
+                }
+            }
+            if(playerHealth == 0)
+            {
+                gameTimer.Stop();
+                lossLabel.Visible = true;
+            }
+
+            if (heroRec.IntersectsWith(objectiveRec) && enemyList.Count == 0)
+            {
+                gameTimer.Stop();
+                winLabel.Visible = true;
+            }
+            else
+            {
+
             }
            
 
@@ -154,6 +175,7 @@ namespace Time_Blast
 
         private void enemyTimer_Tick(object sender, EventArgs e)
         { 
+            //if player health is zero they still move to rub it in your face that they win and have free will and you dont
            Enemy.enemyMove(enemySpeed);
 
             Refresh();
@@ -223,6 +245,9 @@ namespace Time_Blast
             //Draws Enemy Characters
             e.Graphics.FillRectangle(enemyBrush, Enemy.x, Enemy.y, 20, 20);
             e.Graphics.FillRectangle(enemyBrush2, Enemy.x2,Enemy.y2, 20, 20);
+
+            //Draws Objective
+            e.Graphics.FillRectangle(objectiveBrush, 600, 600, 20, 20);
 
         }
 
