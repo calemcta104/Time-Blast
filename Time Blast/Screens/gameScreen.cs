@@ -133,7 +133,7 @@ namespace Time_Blast
         }
         private void gameScreen_Paint(object sender, PaintEventArgs e)
         {
-            //e.Graphics.FillRectangle(heroBrush, Hero.x, Hero.y, heroSize, heroSize);
+           
 
             //Draws Hero Character
             e.Graphics.FillRectangle(heroBrush,Hero.x, Hero.y, 20, 20);
