@@ -166,6 +166,9 @@ namespace Time_Blast.Properties {
         internal static System.Drawing.Bitmap banditDown {
             get {
                 object obj = ResourceManager.GetObject("banditDown", resourceCulture);
+        internal static System.Drawing.Bitmap BulletDown {
+            get {
+                object obj = ResourceManager.GetObject("BulletDown", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +179,9 @@ namespace Time_Blast.Properties {
         internal static System.Drawing.Bitmap banditLeft {
             get {
                 object obj = ResourceManager.GetObject("banditLeft", resourceCulture);
+        internal static System.Drawing.Bitmap BulletLeft {
+            get {
+                object obj = ResourceManager.GetObject("BulletLeft", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +192,9 @@ namespace Time_Blast.Properties {
         internal static System.Drawing.Bitmap BanditLowerLeft {
             get {
                 object obj = ResourceManager.GetObject("BanditLowerLeft", resourceCulture);
+        internal static System.Drawing.Bitmap BulletLowerLeft {
+            get {
+                object obj = ResourceManager.GetObject("BulletLowerLeft", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -195,7 +204,10 @@ namespace Time_Blast.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap BanditLowerRight {
             get {
-                object obj = ResourceManager.GetObject("BanditLowerRight", resourceCulture);
+                object obj = ResourceManager.GetObject("BanditLowerRight", resourceCulture)
+        internal static System.Drawing.Bitmap BulletLowerRight {
+            get {
+                object obj = ResourceManager.GetObject("BulletLowerRight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +218,9 @@ namespace Time_Blast.Properties {
         internal static System.Drawing.Bitmap banditRight {
             get {
                 object obj = ResourceManager.GetObject("banditRight", resourceCulture);
+        internal static System.Drawing.Bitmap BulletRight {
+            get {
+                object obj = ResourceManager.GetObject("BulletRight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,6 +231,9 @@ namespace Time_Blast.Properties {
         internal static System.Drawing.Bitmap banditUp {
             get {
                 object obj = ResourceManager.GetObject("banditUp", resourceCulture);
+        internal static System.Drawing.Bitmap BulletUp {
+            get {
+                object obj = ResourceManager.GetObject("BulletUp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +244,9 @@ namespace Time_Blast.Properties {
         internal static System.Drawing.Bitmap BanditUpperLeft {
             get {
                 object obj = ResourceManager.GetObject("BanditUpperLeft", resourceCulture);
+        internal static System.Drawing.Bitmap BulletUpperLeft {
+            get {
+                object obj = ResourceManager.GetObject("BulletUpperLeft", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +257,9 @@ namespace Time_Blast.Properties {
         internal static System.Drawing.Bitmap BanditUpperRight {
             get {
                 object obj = ResourceManager.GetObject("BanditUpperRight", resourceCulture);
+        internal static System.Drawing.Bitmap BulletUpperRight__1_ {
+            get {
+                object obj = ResourceManager.GetObject("BulletUpperRight__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
