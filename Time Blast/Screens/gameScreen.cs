@@ -18,6 +18,10 @@ namespace Time_Blast
 
         public static Boolean wKeyDown, aKeyDown, sKeyDown, dKeyDown, spaceKeyDown;
 
+        public static int rightBorder = 1200 - heroSize - 30;
+        public static int bottomBorder = 950 - heroSize;
+        
+
         int counter = 0;
         
 

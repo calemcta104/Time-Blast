@@ -75,7 +75,7 @@ namespace Time_Blast
             {
                 y = y - speed;
             }
-            if (moveDown == true && y + 50 <= 700)
+            if (moveDown == true && y + 50 <= gameScreen.bottomBorder)
             {
                 y = y + speed;
             }
@@ -83,7 +83,7 @@ namespace Time_Blast
             {
                 x = x - speed;
             }
-            if (moveRight == true && x + 30 <= 902)
+            if (moveRight == true && x + 30 <= gameScreen.rightBorder)
             {
                 x = x + speed;
             }

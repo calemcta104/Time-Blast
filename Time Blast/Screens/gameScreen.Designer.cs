@@ -51,10 +51,10 @@
             // healthLabel
             // 
             this.healthLabel.AutoSize = true;
-            this.healthLabel.Location = new System.Drawing.Point(30, 96);
+            this.healthLabel.Location = new System.Drawing.Point(38, 120);
             this.healthLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.healthLabel.Name = "healthLabel";
-            this.healthLabel.Size = new System.Drawing.Size(13, 13);
+            this.healthLabel.Size = new System.Drawing.Size(16, 17);
             this.healthLabel.TabIndex = 0;
             this.healthLabel.Text = "4";
             // 
@@ -64,9 +64,10 @@
             this.lossLabel.BackColor = System.Drawing.Color.Transparent;
             this.lossLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lossLabel.ForeColor = System.Drawing.Color.Red;
-            this.lossLabel.Location = new System.Drawing.Point(118, 137);
+            this.lossLabel.Location = new System.Drawing.Point(148, 171);
+            this.lossLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lossLabel.Name = "lossLabel";
-            this.lossLabel.Size = new System.Drawing.Size(535, 108);
+            this.lossLabel.Size = new System.Drawing.Size(669, 135);
             this.lossLabel.TabIndex = 2;
             this.lossLabel.Text = "YOU LOSE";
             this.lossLabel.Visible = false;
@@ -77,23 +78,24 @@
             this.winLabel.BackColor = System.Drawing.Color.Transparent;
             this.winLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.winLabel.ForeColor = System.Drawing.Color.Gold;
-            this.winLabel.Location = new System.Drawing.Point(118, 261);
+            this.winLabel.Location = new System.Drawing.Point(148, 326);
+            this.winLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.winLabel.Name = "winLabel";
-            this.winLabel.Size = new System.Drawing.Size(466, 108);
+            this.winLabel.Size = new System.Drawing.Size(582, 135);
             this.winLabel.TabIndex = 3;
             this.winLabel.Text = "YOU WIN";
             this.winLabel.Visible = false;
             // 
             // gameScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.Controls.Add(this.winLabel);
             this.Controls.Add(this.lossLabel);
             this.Controls.Add(this.healthLabel);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "gameScreen";
             this.Size = new System.Drawing.Size(1200, 1000);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.gameScreen_Paint);
