@@ -29,53 +29,45 @@ namespace Time_Blast
             if (moveUp == true && moveLeft == true)
             {
                 heroImage = gameScreen.wildWestHeroUpLeft;
-                gameScreen.heroSize = 70;
                 faceUp = true;
                 faceLeft = true;
             }
             else if (moveUp == true && moveRight == true)
             {
                 heroImage = gameScreen.wildWestHeroUpRight;
-                gameScreen.heroSize = 70;
                 faceUp = true;
                 faceRight = true;
             }
             else if (moveDown == true && moveLeft == true)
             {
                 heroImage = gameScreen.wildWestHeroDownLeft;
-                gameScreen.heroSize = 70;
                 faceDown = true;
                 faceLeft = true;
             }
             else if (moveDown == true && moveRight == true)
             {
                 heroImage = gameScreen.wildWestHeroDownRight;
-                gameScreen.heroSize = 70;
                 faceRight = true;
                 faceDown = true;
             }
             else if (moveUp == true)
             {
                 heroImage = gameScreen.wildWestHeroUp;
-                gameScreen.heroSize = 50;
                 faceUp = true;
             }
             else if (moveDown == true)
             {
                 heroImage = gameScreen.wildWestHeroDown;
-                gameScreen.heroSize = 50;
                 faceDown = true;
             }
             else if (moveLeft == true)
             {
                 heroImage = gameScreen.wildWestHeroLeft;
-                gameScreen.heroSize = 50;
                 faceLeft = true;
             }
             else if (moveRight == true)
             {
                 heroImage = gameScreen.wildWestHeroRight;
-                gameScreen.heroSize = 50;
                 faceRight = true;
             }
 
