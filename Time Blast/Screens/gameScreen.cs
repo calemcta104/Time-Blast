@@ -26,7 +26,6 @@ namespace Time_Blast
         SolidBrush enemyBrush = new SolidBrush(Color.Blue);
         SolidBrush enemyBrush2 = new SolidBrush(Color.Green);
         SolidBrush objectiveBrush = new SolidBrush(Color.Yellow);
-        
 
         //picture variables
         #region WW hero image variables
@@ -240,220 +239,22 @@ namespace Time_Blast
             if (Form1.wildWestMode == true)
             {
                 e.Graphics.DrawImage(Hero.heroImage, Hero.x, Hero.y, heroSize, heroSize);
-
-                if(Hero.y > Enemy.y && Hero.x < Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.BanditLowerLeft, Enemy.x, Enemy.y, 100, 100);
-                }
-                else if (Hero.y > Enemy.y && Hero.x > Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.BanditLowerRight, Enemy.x, Enemy.y, 100, 100);
-                }
-                else if (Hero.y < Enemy.y && Hero.x > Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.BanditUpperRight, Enemy.x, Enemy.y, 100, 100);
-                }
-                else if (Hero.y < Enemy.y && Hero.x < Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.BanditUpperLeft, Enemy.x, Enemy.y, 100, 100);
-                }
-                else if (Hero.y == Enemy.y && Hero.x < Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.banditLeft, Enemy.x, Enemy.y, 70, 70);
-                }
-                else if (Hero.y == Enemy.y && Hero.x > Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.banditRight, Enemy.x, Enemy.y, 70, 70);
-                }
-                else if(Hero.y < Enemy.y && Hero.x == Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.banditUp, Enemy.x, Enemy.y, 70, 70);
-                }
-                else if(Hero.y > Enemy.y && Hero.x == Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.banditDown, Enemy.x, Enemy.y, 70, 70);
-                }
-
-                if (Hero.y > Enemy.y2 && Hero.x < Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.BanditLowerLeft, Enemy.x2, Enemy.y2, 100, 100);
-                }
-                else if (Hero.y > Enemy.y2 && Hero.x > Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.BanditLowerRight, Enemy.x2, Enemy.y2, 100, 100);
-                }
-                else if (Hero.y < Enemy.y2 && Hero.x > Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.BanditUpperRight, Enemy.x2, Enemy.y2, 100, 100);
-                }
-                else if (Hero.y < Enemy.y2 && Hero.x < Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.BanditUpperLeft, Enemy.x2, Enemy.y2, 100, 100);
-                }
-                else if (Hero.y == Enemy.y2 && Hero.x < Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.banditLeft, Enemy.x2, Enemy.y2, 70, 70);
-                }
-                else if (Hero.y == Enemy.y2 && Hero.x > Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.banditRight, Enemy.x2, Enemy.y2, 70, 70);
-                }
-                else if (Hero.y < Enemy.y2 && Hero.x == Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.banditUp, Enemy.x2, Enemy.y2, 70, 70);
-                }
-                else if (Hero.y > Enemy.y2 && Hero.x == Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.banditDown, Enemy.x2, Enemy.y2, 70, 70);
-                }
             }
 
             if (Form1.futureMode == true)
             {
                 e.Graphics.DrawImage(futureHero, Hero.x, Hero.y, heroSize, heroSize);
-
-                if (Hero.y > Enemy.y && Hero.x < Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.AlienLowerLeft, Enemy.x, Enemy.y, 100, 100);
-                }
-                else if (Hero.y > Enemy.y && Hero.x > Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.AlienLowerRight, Enemy.x, Enemy.y, 100, 100);
-                }
-                else if (Hero.y < Enemy.y && Hero.x > Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.AlienUpperRight, Enemy.x, Enemy.y, 100, 100);
-                }
-                else if (Hero.y < Enemy.y && Hero.x < Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.AlienUpperLeft, Enemy.x, Enemy.y, 100, 100);
-                }
-                else if (Hero.y == Enemy.y && Hero.x < Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.alienLeft, Enemy.x, Enemy.y, 70, 70);
-                }
-                else if (Hero.y == Enemy.y && Hero.x > Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.alienRight, Enemy.x, Enemy.y, 70, 70);
-                }
-                else if (Hero.y < Enemy.y && Hero.x == Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.alienUp, Enemy.x, Enemy.y, 70, 70);
-                }
-                else if (Hero.y > Enemy.y && Hero.x == Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.alienDown, Enemy.x, Enemy.y, 70, 70);
-                }
-
-                if (Hero.y > Enemy.y2 && Hero.x < Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.AlienLowerLeft, Enemy.x2, Enemy.y2, 100, 100);
-                }
-                else if (Hero.y > Enemy.y2 && Hero.x > Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.AlienLowerRight, Enemy.x2, Enemy.y2, 100, 100);
-                }
-                else if (Hero.y < Enemy.y2 && Hero.x > Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.AlienUpperRight, Enemy.x2, Enemy.y2, 100, 100);
-                }
-                else if (Hero.y < Enemy.y2 && Hero.x < Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.AlienUpperLeft, Enemy.x2, Enemy.y2, 100, 100);
-                }
-                else if (Hero.y == Enemy.y2 && Hero.x < Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.alienLeft, Enemy.x2, Enemy.y2, 70, 70);
-                }
-                else if (Hero.y == Enemy.y2 && Hero.x > Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.alienRight, Enemy.x2, Enemy.y2, 70, 70);
-                }
-                else if (Hero.y < Enemy.y2 && Hero.x == Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.alienUp, Enemy.x2, Enemy.y2, 70, 70);
-                }
-                else if (Hero.y > Enemy.y2 && Hero.x == Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.alienDown, Enemy.x2, Enemy.y2, 70, 70);
-                }
             }
             if (Form1.pirateMode == true)
             {
                 e.Graphics.DrawImage(pirateHero, Hero.x, Hero.y, heroSize, heroSize + 10);
-
-                if (Hero.y > Enemy.y && Hero.x < Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.NavyLowerLeft, Enemy.x, Enemy.y, 100, 100);
-                }
-                else if (Hero.y > Enemy.y && Hero.x > Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.NavyLowerRight, Enemy.x, Enemy.y, 100, 100);
-                }
-                else if (Hero.y < Enemy.y && Hero.x > Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.NavyUpperRight, Enemy.x, Enemy.y, 100, 100);
-                }
-                else if (Hero.y < Enemy.y && Hero.x < Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.NavyUpperLeft, Enemy.x, Enemy.y, 100, 100);
-                }
-                else if (Hero.y == Enemy.y && Hero.x < Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.NavyLeft, Enemy.x, Enemy.y, 70, 70);
-                }
-                else if (Hero.y == Enemy.y && Hero.x > Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.NavyRight, Enemy.x, Enemy.y, 70, 70);
-                }
-                else if (Hero.y < Enemy.y && Hero.x == Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.NavyUp, Enemy.x, Enemy.y, 70, 70);
-                }
-                else if (Hero.y > Enemy.y && Hero.x == Enemy.x)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.NavyDown, Enemy.x, Enemy.y, 70, 70);
-                }
-
-                if (Hero.y > Enemy.y2 && Hero.x < Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.NavyLowerLeft, Enemy.x2, Enemy.y2, 100, 100);
-                }
-                else if (Hero.y > Enemy.y2 && Hero.x > Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.NavyLowerRight, Enemy.x2, Enemy.y2, 100, 100);
-                }
-                else if (Hero.y < Enemy.y2 && Hero.x > Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.NavyUpperRight, Enemy.x2, Enemy.y2, 100, 100);
-                }
-                else if (Hero.y < Enemy.y2 && Hero.x < Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.NavyUpperLeft, Enemy.x2, Enemy.y2, 100, 100);
-                }
-                else if (Hero.y == Enemy.y2 && Hero.x < Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.NavyLeft, Enemy.x2, Enemy.y2, 70, 70);
-                }
-                else if (Hero.y == Enemy.y2 && Hero.x > Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.NavyRight, Enemy.x2, Enemy.y2, 70, 70);
-                }
-                else if (Hero.y < Enemy.y2 && Hero.x == Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.NavyUp, Enemy.x2, Enemy.y2, 70, 70);
-                }
-                else if (Hero.y > Enemy.y2 && Hero.x == Enemy.x2)
-                {
-                    e.Graphics.DrawImage(Properties.Resources.NavyDown, Enemy.x2, Enemy.y2, 70, 70);
-                }
             }
 
-            //Draws Enemy Character
             foreach (Bullet b in bulletList)
             {
                 e.Graphics.DrawImage(Bullet.bulletImage, Bullet.bulletX, Bullet.bulletY, bulletSize, bulletSize);
             }
+
 
             //Draws Enemy Characters
             e.Graphics.FillRectangle(enemyBrush, Enemy.x, Enemy.y, 20, 20);
