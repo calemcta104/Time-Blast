@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace Time_Blast
 {
     class Bullet
     {
         public static int bulletX, bulletY, bulletSize;
-
+        public static Boolean bulletMoveUp, bulletMoveRight;
         public static Image bulletImage;
 
         public Bullet(int _bulletX, int _bulletY, int _bulletSize)
@@ -22,43 +23,36 @@ namespace Time_Blast
 
         public static void WildWestShoot(int _bulletSpeed)
         {
-
-            if (Hero.faceUp == true && Hero.faceLeft == true)
-            {
-                bulletX = Hero.x + 50;
-                bulletY = Hero.y;
-            }
-            else if (Hero.faceUp == true && Hero.faceRight == true)
-            {
-                
-            }
-            else if (Hero.faceDown == true && Hero.faceLeft == true)
-            {
-                
-            }
-            else if (Hero.faceDown == true && Hero.faceRight == true)
-            {
-                
-            }
-            else if (Hero.faceUp == true)
+            if (Hero.faceUp == true)
             {
                 bulletX = Hero.x + gameScreen.heroSize - 10;
                 bulletY = Hero.y;
+                bulletImage = gameScreen.wildWestBulletUp;
+                bulletMoveUp = true;
             }
             else if (Hero.faceDown == true)
             {
                 bulletX = Hero.x + 10;
                 bulletY = Hero.y + gameScreen.heroSize;
+                bulletImage = gameScreen.wildWestBulletDown;
+                bulletMoveUp = false;
             }
-            else if (Hero.faceLeft == true)
+            if (Hero.faceLeft == true)
             {
-                bulletX = Hero.x + 10;
-                bulletY = Hero.y + gameScreen.heroSize;
+                bulletX = Hero.x;
+                bulletY = Hero.y + 20;
+                bulletImage = gameScreen.wildWestBulletLeft;
+                bulletMoveRight = false;
             }
             else if (Hero.faceRight == true)
             {
-                
+                bulletX = Hero.x + gameScreen.heroSize;
+                bulletY = Hero.y + gameScreen.heroSize - 10;
+                bulletImage = gameScreen.wildWestBulletRight;
+                bulletMoveRight = true;
             }
+
+           
         }
 
         public static void FutureShoot(int _bulletX, int _bulletY, int _bulletSpeed, int _bulletSize)

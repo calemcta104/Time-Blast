@@ -151,6 +151,8 @@ namespace Time_Blast
                     Bullet bullet1 = new Bullet(Bullet.bulletX, Bullet.bulletY, bulletSize);
                     bulletList.Add(bullet1);
                     Bullet.WildWestShoot(bulletSpeed);
+
+                    
                 }
                 //else if (Form1.futureMode == true)
                 //{
@@ -161,8 +163,15 @@ namespace Time_Blast
                 //    Bullet.PirateShoot();
                 //}
             }
-                
-                
+            if (Bullet.bulletMoveUp == true)
+            { Bullet.bulletY = Bullet.bulletY - bulletSpeed; }
+            else if (Bullet.bulletMoveUp == false)
+            { Bullet.bulletY = Bullet.bulletY + bulletSpeed; }
+            else if (Bullet.bulletMoveRight == true)
+            { Bullet.bulletX = Bullet.bulletX + bulletSpeed; }
+            else if (Bullet.bulletMoveRight == false)
+            { Bullet.bulletX = Bullet.bulletX - bulletSpeed; }
+
 
 
             Refresh();
