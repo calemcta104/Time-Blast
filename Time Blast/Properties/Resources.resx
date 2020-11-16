@@ -118,11 +118,59 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="alienDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alienDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alienLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alienLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AlienLowerLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AlienLowerLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AlienLowerRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AlienLowerRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alienRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alienRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alienUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alienUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AlienUpperLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AlienUpperLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AlienUpperRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AlienUpperRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="backbutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="backButtonResize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Webp.net-resizeimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="banditDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banditDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="banditLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banditLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BanditLowerLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BanditLowerLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BanditLowerRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BanditLowerRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="banditRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banditRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="banditUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banditUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BanditUpperLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BanditUpperLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BanditUpperRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BanditUpperRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BulletDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BulletDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -183,6 +231,30 @@
   </data>
   <data name="HeroUpperRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HeroUpperRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NavyDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NavyDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NavyLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NavyLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NavyLowerLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NavyLowerLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NavyLowerRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NavyLowerRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NavyRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NavyRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NavyUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NavyUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NavyUpperLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NavyUpperLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NavyUpperRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NavyUpperRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="piratebigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\piratebigger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
