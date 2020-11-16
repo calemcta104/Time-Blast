@@ -198,5 +198,29 @@
   <ItemGroup>
     <None Include="Resources\HeroUpperLeft.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BulletDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BulletLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BulletLowerLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BulletLowerRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BulletRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BulletUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BulletUpperRight %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BulletUpperLeft.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

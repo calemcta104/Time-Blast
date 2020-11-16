@@ -10,7 +10,7 @@ namespace Time_Blast
 {
     class Hero
     {
-        public static Boolean faceUp, faceDown, faceLeft, faceRight = false;
+        public static Boolean faceUp = false, faceDown = false, faceLeft = false, faceRight = true;
 
         
         public static int x, y, heroHealth;
@@ -29,34 +29,46 @@ namespace Time_Blast
             if (moveUp == true && moveLeft == true)
             {
                 heroImage = gameScreen.wildWestHeroUpLeft;
+                faceUp = true;
+                faceLeft = true;
             }
             else if (moveUp == true && moveRight == true)
             {
                 heroImage = gameScreen.wildWestHeroUpRight;
+                faceUp = true;
+                faceRight = true;
             }
             else if (moveDown == true && moveLeft == true)
             {
                 heroImage = gameScreen.wildWestHeroDownLeft;
+                faceDown = true;
+                faceLeft = true;
             }
             else if (moveDown == true && moveRight == true)
             {
                 heroImage = gameScreen.wildWestHeroDownRight;
+                faceRight = true;
+                faceDown = true;
             }
             else if (moveUp == true)
             {
                 heroImage = gameScreen.wildWestHeroUp;
+                faceUp = true;
             }
             else if (moveDown == true)
             {
                 heroImage = gameScreen.wildWestHeroDown;
+                faceDown = true;
             }
             else if (moveLeft == true)
             {
                 heroImage = gameScreen.wildWestHeroLeft;
+                faceLeft = true;
             }
             else if (moveRight == true)
             {
                 heroImage = gameScreen.wildWestHeroRight;
+                faceRight = true;
             }
 
             if (moveUp == true && y >= 0)

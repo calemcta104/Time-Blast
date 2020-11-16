@@ -16,7 +16,7 @@ namespace Time_Blast
         #region declaring variables
         //booleans
 
-        public static Boolean wKeyDown, aKeyDown, sKeyDown, dKeyDown;
+        public static Boolean wKeyDown, aKeyDown, sKeyDown, dKeyDown, spaceKeyDown;
 
         int counter = 0;
         
@@ -39,6 +39,17 @@ namespace Time_Blast
         public static Image wildWestHeroDownRight = Properties.Resources.HeroLowerRight;
 
         #endregion
+        #region WW bullet image variables
+        public static Image wildWestBulletRight = Properties.Resources.BulletRight;
+        public static Image wildWestBulletLeft = Properties.Resources.BulletLeft;
+        public static Image wildWestBulletUp = Properties.Resources.BulletUp;
+        public static Image wildWestBulletDown = Properties.Resources.BulletDown;
+        public static Image wildWestBulletUpRight = Properties.Resources.BulletUpperRight__1_;
+        public static Image wildWestBulletUpLeft = Properties.Resources.BulletUpperLeft;
+        public static Image wildWestBulletDownLeft = Properties.Resources.BulletLowerLeft;
+        public static Image wildWestBulletDownRight = Properties.Resources.BulletLowerRight;
+        #endregion
+
         #region Future hero image variables
         public static Image futureHero = Properties.Resources.FutureHero;
         #endregion
@@ -50,13 +61,17 @@ namespace Time_Blast
         //lists
         //List<Hero> heroList = new List<Hero>();
         List<Enemy> enemyList = new List<Enemy>();
+        List<Bullet> bulletList = new List<Bullet>();
 
 
-        //hero variables
+        //hero variables / bullet variables
 
         public static int heroSize = 50;
         int heroSpeed = 7;
         int enemySpeed = 5;
+
+        public static int bulletSpeed = 9;
+        public static int bulletSize = 30;
 
         //health
         int playerHealth = 4;
@@ -68,7 +83,6 @@ namespace Time_Blast
         public gameScreen()
         {
             InitializeComponent();
-            IanMethod();
             OnStart();
         }
 
@@ -128,7 +142,28 @@ namespace Time_Blast
             {
 
             }
-           
+
+
+            if (spaceKeyDown == true)
+            {
+                if (Form1.wildWestMode == true)
+                {
+                    Bullet bullet1 = new Bullet(Bullet.bulletX, Bullet.bulletY, bulletSize);
+                    bulletList.Add(bullet1);
+                    Bullet.WildWestShoot(bulletSpeed);
+                }
+                //else if (Form1.futureMode == true)
+                //{
+                //    Bullet.FutureShoot();
+                //}
+                //else if (Form1.pirateMode == true)
+                //{
+                //    Bullet.PirateShoot();
+                //}
+            }
+                
+                
+
 
             Refresh();
 
@@ -152,6 +187,9 @@ namespace Time_Blast
                 case Keys.D:
                     dKeyDown = false;
                     break;
+                case Keys.Space:
+                    spaceKeyDown = false;
+                    break;
             }
         }
         private void gameScreen_KeyDown(object sender, KeyEventArgs e)
@@ -170,6 +208,9 @@ namespace Time_Blast
                 case Keys.D:
                     dKeyDown = true;
                     break;
+                case Keys.Space:
+                    spaceKeyDown = true;
+                    break;
             }
         }
 
@@ -181,56 +222,14 @@ namespace Time_Blast
             Refresh();
         }
 
-        public void IanMethod()
-        {
-
-        }
-        public void CalemMethod()
-        {
-            
-        }
         private void gameScreen_Paint(object sender, PaintEventArgs e)
         {
            
 
             //Draws Hero Character
-            //e.Graphics.FillRectangle(heroBrush,Hero.x, Hero.y, 20, 20);
             if (Form1.wildWestMode == true)
             {
                 e.Graphics.DrawImage(Hero.heroImage, Hero.x, Hero.y, heroSize, heroSize);
-
-                //if (Hero.faceUp == true)
-                //{ 
-                //    e.Graphics.DrawImage(wildWestHeroUp, Hero.x, Hero.y, heroSize, heroSize);
-                //}
-                //else if (Hero.faceDown == true)
-                //{
-                //    e.Graphics.DrawImage(wildWestHeroDown, Hero.x, Hero.y, heroSize, heroSize);
-                //}
-                //else if (Hero.faceLeft == true)
-                //{
-                //    e.Graphics.DrawImage(wildWestHeroLeft, Hero.x, Hero.y, heroSize, heroSize);
-                //}
-                //else if (Hero.faceRight == true)
-                //{
-                //    e.Graphics.DrawImage(wildWestHeroRight, Hero.x, Hero.y, heroSize, heroSize);
-                //}
-                //else if (Hero.faceUp == true && Hero.faceRight == true)
-                //{
-                //    e.Graphics.DrawImage(wildWestHeroUpRight, Hero.x, Hero.y, heroSize, heroSize);
-                //}
-                //else if (Hero.faceDown == true && Hero.faceRight == true)
-                //{
-                //    e.Graphics.DrawImage(wildWestHeroDownRight, Hero.x, Hero.y, heroSize, heroSize);
-                //}
-                //else if (Hero.faceUp == true && Hero.faceLeft == true)
-                //{
-                //    e.Graphics.DrawImage(wildWestHeroUpLeft, Hero.x, Hero.y, heroSize, heroSize);
-                //}
-                //else if (Hero.faceDown == true && Hero.faceLeft == true)
-                //{
-                //    e.Graphics.DrawImage(wildWestHeroDownLeft, Hero.x, Hero.y, heroSize, heroSize);
-                //}
             }
 
             if (Form1.futureMode == true)
@@ -241,6 +240,12 @@ namespace Time_Blast
             {
                 e.Graphics.DrawImage(pirateHero, Hero.x, Hero.y, heroSize, heroSize + 10);
             }
+
+            foreach (Bullet b in bulletList)
+            {
+                e.Graphics.DrawImage(Bullet.bulletImage, Bullet.bulletX, Bullet.bulletY, bulletSize, bulletSize);
+            }
+
 
             //Draws Enemy Characters
             e.Graphics.FillRectangle(enemyBrush, Enemy.x, Enemy.y, 20, 20);
