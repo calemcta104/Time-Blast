@@ -21,7 +21,8 @@ namespace Time_Blast
 
         private void menuScreen_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.DrawImage(Properties.Resources.titleScreen, 35, 5, 800, 355);
+            e.Graphics.DrawImage(Properties.Resources.titleScreen, 90, 5, 1000, 370);
+            e.Graphics.DrawImage(Properties.Resources.MuralArt, 90, 380, 1000, 430);
         }
 
         private void exitButton_Click_1(object sender, EventArgs e)

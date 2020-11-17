@@ -37,7 +37,7 @@
             // PlayButton
             // 
             this.PlayButton.Image = global::Time_Blast.Properties.Resources.playButtonResize;
-            this.PlayButton.Location = new System.Drawing.Point(69, 793);
+            this.PlayButton.Location = new System.Drawing.Point(68, 818);
             this.PlayButton.Name = "PlayButton";
             this.PlayButton.Size = new System.Drawing.Size(228, 122);
             this.PlayButton.TabIndex = 3;
@@ -47,7 +47,7 @@
             // exitButton
             // 
             this.exitButton.Image = global::Time_Blast.Properties.Resources.exitButtonResize;
-            this.exitButton.Location = new System.Drawing.Point(919, 793);
+            this.exitButton.Location = new System.Drawing.Point(921, 816);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(227, 124);
             this.exitButton.TabIndex = 2;

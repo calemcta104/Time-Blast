@@ -293,6 +293,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\banditDown.png" />
+    <None Include="Resources\MuralArt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FutureObjective.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpaceBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_BanditLeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kraken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alienBoss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DesertBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OceanBackground.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
