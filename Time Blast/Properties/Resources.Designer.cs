@@ -63,15 +63,9 @@ namespace Time_Blast.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-
-        internal static System.Drawing.Bitmap alienDown {
-            get {
-                object obj = ResourceManager.GetObject("alienDown", resourceCulture);
-
         internal static System.Drawing.Bitmap _BanditLeader {
             get {
                 object obj = ResourceManager.GetObject("_BanditLeader", resourceCulture);
-
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -79,7 +73,26 @@ namespace Time_Blast.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-
+        internal static System.Drawing.Bitmap alienBoss {
+            get {
+                object obj = ResourceManager.GetObject("alienBoss", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alienDown {
+            get {
+                object obj = ResourceManager.GetObject("alienDown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap alienLeft {
             get {
                 object obj = ResourceManager.GetObject("alienLeft", resourceCulture);
@@ -143,11 +156,6 @@ namespace Time_Blast.Properties {
         internal static System.Drawing.Bitmap AlienUpperRight {
             get {
                 object obj = ResourceManager.GetObject("AlienUpperRight", resourceCulture);
-
-        internal static System.Drawing.Bitmap alienBoss {
-            get {
-                object obj = ResourceManager.GetObject("alienBoss", resourceCulture);
-
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -475,15 +483,9 @@ namespace Time_Blast.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-
-        internal static System.Drawing.Bitmap NavyDown {
-            get {
-                object obj = ResourceManager.GetObject("NavyDown", resourceCulture);
-
         internal static System.Drawing.Bitmap Kraken {
             get {
                 object obj = ResourceManager.GetObject("Kraken", resourceCulture);
-
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -491,15 +493,9 @@ namespace Time_Blast.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-
-        internal static System.Drawing.Bitmap NavyLeft {
-            get {
-                object obj = ResourceManager.GetObject("NavyLeft", resourceCulture);
-
         internal static System.Drawing.Bitmap MuralArt {
             get {
                 object obj = ResourceManager.GetObject("MuralArt", resourceCulture);
-
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -507,7 +503,26 @@ namespace Time_Blast.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-
+        internal static System.Drawing.Bitmap NavyDown {
+            get {
+                object obj = ResourceManager.GetObject("NavyDown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NavyLeft {
+            get {
+                object obj = ResourceManager.GetObject("NavyLeft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap NavyLowerLeft {
             get {
                 object obj = ResourceManager.GetObject("NavyLowerLeft", resourceCulture);
@@ -561,11 +576,16 @@ namespace Time_Blast.Properties {
         internal static System.Drawing.Bitmap NavyUpperRight {
             get {
                 object obj = ResourceManager.GetObject("NavyUpperRight", resourceCulture);
-
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap OceanBackground {
             get {
                 object obj = ResourceManager.GetObject("OceanBackground", resourceCulture);
-
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
