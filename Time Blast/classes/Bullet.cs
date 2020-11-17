@@ -10,7 +10,7 @@ namespace Time_Blast
     class Bullet
     {
         public static int bulletX, bulletY, bulletSize;
-        public static Boolean bulletMoveUp, bulletMoveRight;
+        public static Boolean bulletMoveUp, bulletMoveRight, bulletMoveDown, bulletMoveLeft;
         public static Image bulletImage;
 
         public Bullet(int _bulletX, int _bulletY, int _bulletSize)
@@ -29,20 +29,30 @@ namespace Time_Blast
                 bulletY = Hero.y;
                 bulletImage = gameScreen.wildWestBulletUp;
                 bulletMoveUp = true;
+                bulletMoveLeft = false;
+                bulletMoveRight = false;
+                bulletMoveDown = false;
+
             }
             else if (Hero.faceDown == true)
             {
                 bulletX = Hero.x + 10;
                 bulletY = Hero.y + gameScreen.heroSize;
                 bulletImage = gameScreen.wildWestBulletDown;
+                bulletMoveDown = true;
                 bulletMoveUp = false;
+                bulletMoveLeft = false;
+                bulletMoveRight = false;
             }
             if (Hero.faceLeft == true)
             {
                 bulletX = Hero.x;
                 bulletY = Hero.y + 20;
                 bulletImage = gameScreen.wildWestBulletLeft;
+                bulletMoveLeft = true;
                 bulletMoveRight = false;
+                bulletMoveUp = false;
+                bulletMoveDown = false;
             }
             else if (Hero.faceRight == true)
             {
@@ -50,6 +60,9 @@ namespace Time_Blast
                 bulletY = Hero.y + gameScreen.heroSize - 10;
                 bulletImage = gameScreen.wildWestBulletRight;
                 bulletMoveRight = true;
+                bulletMoveLeft = false;
+                bulletMoveUp = false;
+                bulletMoveDown = false;
             }
 
            

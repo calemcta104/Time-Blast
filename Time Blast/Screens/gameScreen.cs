@@ -76,6 +76,7 @@ namespace Time_Blast
         //health
         int playerHealth = 4;
         int enemyHealth = 3;
+        int enemy2Health = 3;
 
         #endregion
 
@@ -90,22 +91,26 @@ namespace Time_Blast
         {
             Enemy enemy1 = new Enemy(Enemy.x, Enemy.y, heroSize);
             Enemy enemy2 = new Enemy(Enemy.x2, Enemy.y2, heroSize);
+
             enemyList.Add(enemy1);
             enemyList.Add(enemy2);
 
-            Hero.x = 200;
-            Hero.y = 200;
+
             Enemy.x = 400;
             Enemy.y = 100;
             Enemy.x2 = 100;
             Enemy.y2 = 400;
+
+            Hero.x = 200;
+            Hero.y = 200;
+            
             Hero hero1 = new Hero(Hero.x, Hero.y, heroSize);
 
             
             //heroList.Add(hero1);
         }
 
-        
+
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
@@ -113,13 +118,16 @@ namespace Time_Blast
             Rectangle enemyRec = new Rectangle(Enemy.x, Enemy.y, heroSize, heroSize);
             Rectangle enemyRec2 = new Rectangle(Enemy.x2, Enemy.y2, heroSize, heroSize);
             Rectangle objectiveRec = new Rectangle(600, 600, 20, 20);
+            Rectangle herobulletRec = new Rectangle(Bullet.bulletX, Bullet.bulletY, Bullet.bulletSize, Bullet.bulletSize);
+
+            
 
 
             Hero.Move(heroSpeed, wKeyDown, sKeyDown, aKeyDown, dKeyDown);
             counter++;
             if (heroRec.IntersectsWith(enemyRec) || heroRec.IntersectsWith(enemyRec2))
             {
-                
+
                 if (counter > 50)
                 {
                     playerHealth--;
@@ -127,7 +135,29 @@ namespace Time_Blast
                     counter = 0;
                 }
             }
-            if(playerHealth == 0)
+
+            if (herobulletRec.IntersectsWith(enemyRec))
+            {
+                enemyHealth--;
+            }
+            if (herobulletRec.IntersectsWith(enemyRec2))
+            {
+                enemy2Health--;
+            }
+            if (enemyHealth == 0)
+            {
+                foreach(Enemy f in enemyList)
+                {
+                    enemyList.Remove(f);
+                    return;
+                }
+                
+            }
+            if(enemy2Health == 0)
+            {
+                
+            }
+            if (playerHealth == 0)
             {
                 gameTimer.Stop();
                 lossLabel.Visible = true;
@@ -151,8 +181,7 @@ namespace Time_Blast
                     Bullet bullet1 = new Bullet(Bullet.bulletX, Bullet.bulletY, bulletSize);
                     bulletList.Add(bullet1);
                     Bullet.WildWestShoot(bulletSpeed);
-
-                    
+                   
                 }
                 //else if (Form1.futureMode == true)
                 //{
@@ -162,15 +191,24 @@ namespace Time_Blast
                 //{
                 //    Bullet.PirateShoot();
                 //}
+
+
+
             }
-            if (Bullet.bulletMoveUp == true)
-            { Bullet.bulletY = Bullet.bulletY - bulletSpeed; }
-            else if (Bullet.bulletMoveUp == false)
-            { Bullet.bulletY = Bullet.bulletY + bulletSpeed; }
-            else if (Bullet.bulletMoveRight == true)
-            { Bullet.bulletX = Bullet.bulletX + bulletSpeed; }
-            else if (Bullet.bulletMoveRight == false)
-            { Bullet.bulletX = Bullet.bulletX - bulletSpeed; }
+            if (spaceKeyDown == false)
+            {
+                if (Bullet.bulletMoveUp == true)
+                { Bullet.bulletY = Bullet.bulletY - bulletSpeed; }
+                else if (Bullet.bulletMoveDown == true)
+                { Bullet.bulletY = Bullet.bulletY + bulletSpeed; }
+                else if (Bullet.bulletMoveRight == true)
+                { Bullet.bulletX = Bullet.bulletX + bulletSpeed; }
+                else if (Bullet.bulletMoveLeft == true)
+                { 
+                    Bullet.bulletX = Bullet.bulletX - bulletSpeed;
+                }
+            }
+           
 
 
 
@@ -179,6 +217,10 @@ namespace Time_Blast
 
         }
 
+        private void gameScreen_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
 
         private void gameScreen_KeyUp(object sender, KeyEventArgs e)
         {
@@ -199,6 +241,8 @@ namespace Time_Blast
                 case Keys.Space:
                     spaceKeyDown = false;
                     break;
+
+                
             }
         }
         private void gameScreen_KeyDown(object sender, KeyEventArgs e)
