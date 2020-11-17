@@ -12,6 +12,7 @@ namespace Time_Blast
 
         public static int x, y, enemyHealth;
         public static int x2, y2, enemyHealth2;
+        public static int x3, y3, enemyHealth3;
 
         public Enemy(int _x, int _y, int _enemyHealth)
         {
@@ -28,9 +29,6 @@ namespace Time_Blast
              Random moveGen = new Random();
 
               int enemyMovement = moveGen.Next(1, 3);
-
-            
-
 
                 //tries to match Y level
                 if (enemyMovement == 1)
@@ -82,6 +80,31 @@ namespace Time_Blast
                 }
             }
 
+
+            //tries to match Y level
+            if (enemyMovement == 1)
+            {
+                if (Hero.y < y3 - 25)
+                {
+                    y3 = y3 - speed - 2;
+                }
+                else if (Hero.y > y3)
+                {
+                    y3 = y3 + speed - 2;
+                }
+            }
+            //Tries to match X level
+            else if (enemyMovement == 2)
+            {
+                if (Hero.x < x3 - 20)
+                {
+                    x3 = x3 - speed - 2;
+                }
+                else if (Hero.x > x3)
+                {
+                    x3 = x3 + speed - 2;
+                }
+            }
         }
     }
 }

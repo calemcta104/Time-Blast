@@ -20,10 +20,11 @@ namespace Time_Blast
 
         public static int rightBorder = 1200 - heroSize - 30;
         public static int bottomBorder = 950 - heroSize;
-        
+
+        int room = 0;
 
         int counter = 0;
-        
+
 
         //brushes
         SolidBrush heroBrush = new SolidBrush(Color.Red);
@@ -92,24 +93,29 @@ namespace Time_Blast
 
         public void OnStart()
         {
+            Hero hero1 = new Hero(Hero.x, Hero.y, heroSize);
+
+            StartRoom();
+        }
+
+        public void StartRoom()
+        {
             Enemy enemy1 = new Enemy(Enemy.x, Enemy.y, heroSize);
             Enemy enemy2 = new Enemy(Enemy.x2, Enemy.y2, heroSize);
             enemyList.Add(enemy1);
             enemyList.Add(enemy2);
 
-            Hero.x = 200;
-            Hero.y = 200;
-            Enemy.x = 400;
-            Enemy.y = 100;
-            Enemy.x2 = 100;
+            Hero.x = 600;
+            Hero.y = 100;
+            Enemy.x = 300;
+            Enemy.y = 600;
+            Enemy.x2 = 700;
             Enemy.y2 = 400;
-            Hero hero1 = new Hero(Hero.x, Hero.y, heroSize);
 
-            
-            //heroList.Add(hero1);
+
         }
 
-        
+
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
@@ -119,11 +125,13 @@ namespace Time_Blast
             Rectangle objectiveRec = new Rectangle(600, 600, 20, 20);
 
 
+
+
             Hero.Move(heroSpeed, wKeyDown, sKeyDown, aKeyDown, dKeyDown);
             counter++;
             if (heroRec.IntersectsWith(enemyRec) || heroRec.IntersectsWith(enemyRec2))
             {
-                
+
                 if (counter > 50)
                 {
                     playerHealth--;
@@ -131,19 +139,95 @@ namespace Time_Blast
                     counter = 0;
                 }
             }
-            if(playerHealth == 0)
+            if (playerHealth == 0)
             {
                 gameTimer.Stop();
                 lossLabel.Visible = true;
             }
 
+            if (enemyList.Count == 0)
+            {
+                Rectangle arrowRec = new Rectangle(900, 500, 30, 30);
+                Rectangle arrowRec2 = new Rectangle(100, 500, 30, 30);
+
+
+                if (heroRec.IntersectsWith(arrowRec) && enemyList.Count == 0)
+                {
+                    if (room == 0)
+                    {
+                        //set new room and reset character position
+                        room = 1;
+                        Hero.x = 600;
+                        Hero.y = 100;
+
+                        //spawns new enemies
+                        Enemy enemy1 = new Enemy(Enemy.x, Enemy.y, heroSize);
+                        Enemy enemy2 = new Enemy(Enemy.x2, Enemy.y2, heroSize);
+                        enemyList.Add(enemy1);
+                        enemyList.Add(enemy2);
+                        Enemy.x = 400;
+                        Enemy.y = 800;
+                        Enemy.x2 = 200;
+                        Enemy.y2 = 700;
+                    }
+                    else if (room == 1)
+                    {
+                        //set new room and reset character position
+                        room = 2;
+                        Hero.x = 600;
+                        Hero.y = 100;
+
+                        //spawns new enemies
+                        Enemy enemy1 = new Enemy(Enemy.x, Enemy.y, heroSize);
+                        Enemy enemy2 = new Enemy(Enemy.x2, Enemy.y2, heroSize);
+                        Enemy enemy3 = new Enemy(Enemy.x3, Enemy.y3, heroSize);
+                        enemyList.Add(enemy1);
+                        enemyList.Add(enemy2);
+                        enemyList.Add(enemy3);
+                        Enemy.x = 200;
+                        Enemy.y = 400;
+                        Enemy.x2 = 900;
+                        Enemy.y2 = 700;
+                        Enemy.x3 = 500;
+                        Enemy.y3 = 600;
+                    }
+                    else if (room == 2)
+                    {
+                        //set new room and reset character position
+                        room = 3;
+                        Hero.x = 600;
+                        Hero.y = 100;
+
+                        //spawns new enemies
+                        Enemy enemy1 = new Enemy(Enemy.x, Enemy.y, heroSize);
+                        Enemy enemy2 = new Enemy(Enemy.x2, Enemy.y2, heroSize);
+                        enemyList.Add(enemy1);
+                        enemyList.Add(enemy2);
+                        Enemy.x = 300;
+                        Enemy.y = 500;
+                        Enemy.x2 = 800;
+                        Enemy.y2 = 600;
+                    }
+                }
+
+                if (heroRec.IntersectsWith(arrowRec2) && enemyList.Count == 0 && room < 0)
+                {
+                    if (room == 1)
+                    {
+                        //set new room and reset character position
+                        room = 0;
+                        Hero.x = 850;
+                        Hero.y = 500;
+                    }
+                }
+            }
+        
+
+
             if (heroRec.IntersectsWith(objectiveRec) && enemyList.Count == 0)
             {
                 gameTimer.Stop();
                 winLabel.Visible = true;
-            }
-            else
-            {
 
             }
 
@@ -176,10 +260,7 @@ namespace Time_Blast
             else if (Bullet.bulletMoveRight == false)
             { Bullet.bulletX = Bullet.bulletX - bulletSpeed; }
 
-
-
             Refresh();
-
 
         }
 
@@ -259,14 +340,37 @@ namespace Time_Blast
                 e.Graphics.DrawImage(Bullet.bulletImage, Bullet.bulletX, Bullet.bulletY, bulletSize, bulletSize);
             }
 
+            // changing background
+            //if (Form1.wildWestMode == true)
+            //{
+            //    BackgroundImage = Properties.Resources.DesertBackground;
+            //}
+            //else if (Form1.futureMode == true)
+            //{
+            //    BackgroundImage = Properties.Resources.SpaceBackground;
+            //}
+            //else if (Form1.pirateMode == true)
+            //{
+            //    BackgroundImage = Properties.Resources.OceanBackground;
+            //}
 
             //Draws Enemy Characters
             e.Graphics.FillRectangle(enemyBrush, Enemy.x, Enemy.y, 20, 20);
             e.Graphics.FillRectangle(enemyBrush2, Enemy.x2,Enemy.y2, 20, 20);
+            e.Graphics.FillRectangle(enemyBrush, Enemy.x3, Enemy.y3, 20, 20);
+
 
             //Draws Objective
             e.Graphics.FillRectangle(objectiveBrush, 600, 600, 20, 20);
 
+            //fills next room arrow
+            e.Graphics.FillRectangle(objectiveBrush, 900, 500, 30, 30);
+
+            if (room < 0)
+            {
+                //fills back room arrow
+                e.Graphics.FillRectangle(objectiveBrush, 100, 500, 30, 30);
+            }
         }
 
     }
