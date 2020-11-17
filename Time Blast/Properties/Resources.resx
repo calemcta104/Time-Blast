@@ -145,7 +145,6 @@
   </data>
     <data name="alienBoss" type="System.Resources.ResXFileRef, System.Windows.Forms">
       <value>..\Resources\alienBoss.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-
     </data>
     <data name="backbutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
       <value>..\Resources\backbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -243,7 +242,6 @@
     <data name="HeroUpperRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
       <value>..\Resources\HeroUpperRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     </data>
-
     <data name="NavyDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
       <value>..\Resources\NavyDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     </data>
@@ -267,7 +265,6 @@
     </data>
     <data name="NavyUpperRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
       <value>..\Resources\NavyUpperRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-
       <data name="Kraken" type="System.Resources.ResXFileRef, System.Windows.Forms">
         <value>..\Resources\Kraken.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
       </data>
@@ -276,7 +273,6 @@
       </data>
       <data name="OceanBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
         <value>..\Resources\OceanBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-
       </data>
       <data name="piratebigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
         <value>..\Resources\piratebigger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -305,5 +301,116 @@
       <data name="_BanditLeader" type="System.Resources.ResXFileRef, System.Windows.Forms">
         <value>..\Resources\_BanditLeader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
       </data>
-    </data>
   </root>
+  <data name="alienBoss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alienBoss.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backbutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backButtonResize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Webp.net-resizeimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BulletDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BulletDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BulletLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BulletLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BulletLowerLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BulletLowerLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BulletLowerRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BulletLowerRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BulletRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BulletRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BulletUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BulletUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BulletUpperLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BulletUpperLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BulletUpperRight__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BulletUpperRight (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DesertBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DesertBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exitButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exitButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exitButtonResize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Webp.net-resizeimage (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FutureHero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FutureHero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FutureObjective" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FutureObjective.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="futureResize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\futureResize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HeroDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeroDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HeroLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeroLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HeroLowerLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeroLowerLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HeroLowerRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeroLowerRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HeroRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeroRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HeroUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeroUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HeroUpperLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeroUpperLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HeroUpperRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeroUpperRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kraken" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kraken.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MuralArt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MuralArt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OceanBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OceanBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="piratebigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\piratebigger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PirtateHero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PirtateHero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="playButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\playButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="playButtonResize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Webp.net-resizeimage (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpaceBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SpaceBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="titleScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\titleScreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WWHero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WWHero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WWResize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WWResize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_BanditLeader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\_BanditLeader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
