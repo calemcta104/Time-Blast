@@ -81,6 +81,7 @@ namespace Time_Blast
         //health
         int playerHealth = 4;
         int enemyHealth = 3;
+        int enemy2Health = 3;
 
         #endregion
 
@@ -102,8 +103,12 @@ namespace Time_Blast
         {
             Enemy enemy1 = new Enemy(Enemy.x, Enemy.y, heroSize);
             Enemy enemy2 = new Enemy(Enemy.x2, Enemy.y2, heroSize);
+
             enemyList.Add(enemy1);
             enemyList.Add(enemy2);
+
+
+            Hero hero1 = new Hero(Hero.x, Hero.y, heroSize);
 
             Hero.x = 600;
             Hero.y = 100;
@@ -121,6 +126,9 @@ namespace Time_Blast
             Rectangle enemyRec = new Rectangle(Enemy.x, Enemy.y, heroSize, heroSize);
             Rectangle enemyRec2 = new Rectangle(Enemy.x2, Enemy.y2, heroSize, heroSize);
             Rectangle objectiveRec = new Rectangle(600, 600, 20, 20);
+            Rectangle herobulletRec = new Rectangle(Bullet.bulletX, Bullet.bulletY, Bullet.bulletSize, Bullet.bulletSize);
+
+            
 
             Hero.Move(heroSpeed, wKeyDown, sKeyDown, aKeyDown, dKeyDown);
             counter++;
@@ -134,6 +142,29 @@ namespace Time_Blast
                     counter = 0;
                 }
             }
+
+            if (herobulletRec.IntersectsWith(enemyRec))
+            {
+                enemyHealth--;
+            }
+            if (herobulletRec.IntersectsWith(enemyRec2))
+            {
+                enemy2Health--;
+            }
+            if (enemyHealth == 0)
+            {
+                foreach(Enemy f in enemyList)
+                {
+                    enemyList.Remove(f);
+                    return;
+                }
+                
+            }
+            if(enemy2Health == 0)
+            {
+                
+            }
+
             if (playerHealth == 0)
             {
                 gameTimer.Stop();
@@ -279,8 +310,7 @@ namespace Time_Blast
                     Bullet bullet1 = new Bullet(Bullet.bulletX, Bullet.bulletY, bulletSize);
                     bulletList.Add(bullet1);
                     Bullet.WildWestShoot(bulletSpeed);
-
-                    
+                   
                 }
                 //else if (Form1.futureMode == true)
                 //{
@@ -290,20 +320,33 @@ namespace Time_Blast
                 //{
                 //    Bullet.PirateShoot();
                 //}
+
+
+
             }
-            if (Bullet.bulletMoveUp == true)
-            { Bullet.bulletY = Bullet.bulletY - bulletSpeed; }
-            else if (Bullet.bulletMoveUp == false)
-            { Bullet.bulletY = Bullet.bulletY + bulletSpeed; }
-            else if (Bullet.bulletMoveRight == true)
-            { Bullet.bulletX = Bullet.bulletX + bulletSpeed; }
-            else if (Bullet.bulletMoveRight == false)
-            { Bullet.bulletX = Bullet.bulletX - bulletSpeed; }
+            if (spaceKeyDown == false)
+            {
+                if (Bullet.bulletMoveUp == true)
+                { Bullet.bulletY = Bullet.bulletY - bulletSpeed; }
+                else if (Bullet.bulletMoveDown == true)
+                { Bullet.bulletY = Bullet.bulletY + bulletSpeed; }
+                else if (Bullet.bulletMoveRight == true)
+                { Bullet.bulletX = Bullet.bulletX + bulletSpeed; }
+                else if (Bullet.bulletMoveLeft == true)
+                { 
+                    Bullet.bulletX = Bullet.bulletX - bulletSpeed;
+                }
+            }
+           
 
             Refresh();
 
         }
 
+        private void gameScreen_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
 
         private void gameScreen_KeyUp(object sender, KeyEventArgs e)
         {
@@ -324,6 +367,8 @@ namespace Time_Blast
                 case Keys.Space:
                     spaceKeyDown = false;
                     break;
+
+                
             }
         }
         private void gameScreen_KeyDown(object sender, KeyEventArgs e)
@@ -364,21 +409,220 @@ namespace Time_Blast
             if (Form1.wildWestMode == true)
             {
                 e.Graphics.DrawImage(Hero.heroImage, Hero.x, Hero.y, heroSize, heroSize);
+
+                if (Hero.y > Enemy.y && Hero.x < Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.BanditLowerLeft, Enemy.x, Enemy.y, 100, 100);
+                }
+                else if (Hero.y > Enemy.y && Hero.x > Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.BanditLowerRight, Enemy.x, Enemy.y, 100, 100);
+                }
+                else if (Hero.y < Enemy.y && Hero.x > Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.BanditUpperRight, Enemy.x, Enemy.y, 100, 100);
+                }
+                else if (Hero.y < Enemy.y && Hero.x < Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.BanditUpperLeft, Enemy.x, Enemy.y, 100, 100);
+                }
+                else if (Hero.y == Enemy.y && Hero.x < Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.banditLeft, Enemy.x, Enemy.y, 70, 70);
+                }
+                else if (Hero.y == Enemy.y && Hero.x > Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.banditRight, Enemy.x, Enemy.y, 70, 70);
+                }
+                else if (Hero.y < Enemy.y && Hero.x == Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.banditUp, Enemy.x, Enemy.y, 70, 70);
+                }
+                else if (Hero.y > Enemy.y && Hero.x == Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.banditDown, Enemy.x, Enemy.y, 70, 70);
+                }
+
+                if (Hero.y > Enemy.y2 && Hero.x < Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.BanditLowerLeft, Enemy.x2, Enemy.y2, 100, 100);
+                }
+                else if (Hero.y > Enemy.y2 && Hero.x > Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.BanditLowerRight, Enemy.x2, Enemy.y2, 100, 100);
+                }
+                else if (Hero.y < Enemy.y2 && Hero.x > Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.BanditUpperRight, Enemy.x2, Enemy.y2, 100, 100);
+                }
+                else if (Hero.y < Enemy.y2 && Hero.x < Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.BanditUpperLeft, Enemy.x2, Enemy.y2, 100, 100);
+                }
+                else if (Hero.y == Enemy.y2 && Hero.x < Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.banditLeft, Enemy.x2, Enemy.y2, 70, 70);
+                }
+                else if (Hero.y == Enemy.y2 && Hero.x > Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.banditRight, Enemy.x2, Enemy.y2, 70, 70);
+                }
+                else if (Hero.y < Enemy.y2 && Hero.x == Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.banditUp, Enemy.x2, Enemy.y2, 70, 70);
+                }
+                else if (Hero.y > Enemy.y2 && Hero.x == Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.banditDown, Enemy.x2, Enemy.y2, 70, 70);
+                }
             }
 
             if (Form1.futureMode == true)
             {
                 e.Graphics.DrawImage(futureHero, Hero.x, Hero.y, heroSize, heroSize);
+
+                if (Hero.y > Enemy.y && Hero.x < Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.AlienLowerLeft, Enemy.x, Enemy.y, 100, 100);
+                }
+                else if (Hero.y > Enemy.y && Hero.x > Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.AlienLowerRight, Enemy.x, Enemy.y, 100, 100);
+                }
+                else if (Hero.y < Enemy.y && Hero.x > Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.AlienUpperRight, Enemy.x, Enemy.y, 100, 100);
+                }
+                else if (Hero.y < Enemy.y && Hero.x < Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.AlienUpperLeft, Enemy.x, Enemy.y, 100, 100);
+                }
+                else if (Hero.y == Enemy.y && Hero.x < Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.alienLeft, Enemy.x, Enemy.y, 70, 70);
+                }
+                else if (Hero.y == Enemy.y && Hero.x > Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.alienRight, Enemy.x, Enemy.y, 70, 70);
+                }
+                else if (Hero.y < Enemy.y && Hero.x == Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.alienUp, Enemy.x, Enemy.y, 70, 70);
+                }
+                else if (Hero.y > Enemy.y && Hero.x == Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.alienDown, Enemy.x, Enemy.y, 70, 70);
+                }
+
+                if (Hero.y > Enemy.y2 && Hero.x < Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.AlienLowerLeft, Enemy.x2, Enemy.y2, 100, 100);
+                }
+                else if (Hero.y > Enemy.y2 && Hero.x > Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.AlienLowerRight, Enemy.x2, Enemy.y2, 100, 100);
+                }
+                else if (Hero.y < Enemy.y2 && Hero.x > Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.AlienUpperRight, Enemy.x2, Enemy.y2, 100, 100);
+                }
+                else if (Hero.y < Enemy.y2 && Hero.x < Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.AlienUpperLeft, Enemy.x2, Enemy.y2, 100, 100);
+                }
+                else if (Hero.y == Enemy.y2 && Hero.x < Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.alienLeft, Enemy.x2, Enemy.y2, 70, 70);
+                }
+                else if (Hero.y == Enemy.y2 && Hero.x > Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.alienRight, Enemy.x2, Enemy.y2, 70, 70);
+                }
+                else if (Hero.y < Enemy.y2 && Hero.x == Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.alienUp, Enemy.x2, Enemy.y2, 70, 70);
+                }
+                else if (Hero.y > Enemy.y2 && Hero.x == Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.alienDown, Enemy.x2, Enemy.y2, 70, 70);
+                }
             }
             if (Form1.pirateMode == true)
             {
                 e.Graphics.DrawImage(pirateHero, Hero.x, Hero.y, heroSize, heroSize + 10);
+
+                if (Hero.y > Enemy.y && Hero.x < Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.NavyLowerLeft, Enemy.x, Enemy.y, 100, 100);
+                }
+                else if (Hero.y > Enemy.y && Hero.x > Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.NavyLowerRight, Enemy.x, Enemy.y, 100, 100);
+                }
+                else if (Hero.y < Enemy.y && Hero.x > Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.NavyUpperRight, Enemy.x, Enemy.y, 100, 100);
+                }
+                else if (Hero.y < Enemy.y && Hero.x < Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.NavyUpperLeft, Enemy.x, Enemy.y, 100, 100);
+                }
+                else if (Hero.y == Enemy.y && Hero.x < Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.NavyLeft, Enemy.x, Enemy.y, 70, 70);
+                }
+                else if (Hero.y == Enemy.y && Hero.x > Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.NavyRight, Enemy.x, Enemy.y, 70, 70);
+                }
+                else if (Hero.y < Enemy.y && Hero.x == Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.NavyUp, Enemy.x, Enemy.y, 70, 70);
+                }
+                else if (Hero.y > Enemy.y && Hero.x == Enemy.x)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.NavyDown, Enemy.x, Enemy.y, 70, 70);
+                }
+
+                if (Hero.y > Enemy.y2 && Hero.x < Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.NavyLowerLeft, Enemy.x2, Enemy.y2, 100, 100);
+                }
+                else if (Hero.y > Enemy.y2 && Hero.x > Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.NavyLowerRight, Enemy.x2, Enemy.y2, 100, 100);
+                }
+                else if (Hero.y < Enemy.y2 && Hero.x > Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.NavyUpperRight, Enemy.x2, Enemy.y2, 100, 100);
+                }
+                else if (Hero.y < Enemy.y2 && Hero.x < Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.NavyUpperLeft, Enemy.x2, Enemy.y2, 100, 100);
+                }
+                else if (Hero.y == Enemy.y2 && Hero.x < Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.NavyLeft, Enemy.x2, Enemy.y2, 70, 70);
+                }
+                else if (Hero.y == Enemy.y2 && Hero.x > Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.NavyRight, Enemy.x2, Enemy.y2, 70, 70);
+                }
+                else if (Hero.y < Enemy.y2 && Hero.x == Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.NavyUp, Enemy.x2, Enemy.y2, 70, 70);
+                }
+                else if (Hero.y > Enemy.y2 && Hero.x == Enemy.x2)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.NavyDown, Enemy.x2, Enemy.y2, 70, 70);
+                }
             }
 
             foreach (Bullet b in bulletList)
             {
                 e.Graphics.DrawImage(Bullet.bulletImage, Bullet.bulletX, Bullet.bulletY, bulletSize, bulletSize);
             }
+
 
             // changing background
             //if (Form1.wildWestMode == true)
@@ -398,8 +642,7 @@ namespace Time_Blast
             e.Graphics.FillRectangle(enemyBrush, Enemy.x, Enemy.y, 20, 20);
             e.Graphics.FillRectangle(enemyBrush2, Enemy.x2,Enemy.y2, 20, 20);
             e.Graphics.FillRectangle(enemyBrush, Enemy.x3, Enemy.y3, 20, 20);
-
-
+            
             //Draws Objective
             e.Graphics.FillRectangle(objectiveBrush, 600, 600, 20, 20);
 

@@ -101,6 +101,7 @@
             this.Size = new System.Drawing.Size(1200, 1000);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.gameScreen_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gameScreen_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gameScreen_KeyPress);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gameScreen_KeyUp);
             this.ResumeLayout(false);
             this.PerformLayout();
