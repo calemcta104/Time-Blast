@@ -111,8 +111,6 @@ namespace Time_Blast
             Enemy.y = 600;
             Enemy.x2 = 700;
             Enemy.y2 = 400;
-
-
         }
 
 
@@ -123,9 +121,6 @@ namespace Time_Blast
             Rectangle enemyRec = new Rectangle(Enemy.x, Enemy.y, heroSize, heroSize);
             Rectangle enemyRec2 = new Rectangle(Enemy.x2, Enemy.y2, heroSize, heroSize);
             Rectangle objectiveRec = new Rectangle(600, 600, 20, 20);
-
-
-
 
             Hero.Move(heroSpeed, wKeyDown, sKeyDown, aKeyDown, dKeyDown);
             counter++;
@@ -149,6 +144,8 @@ namespace Time_Blast
             {
                 Rectangle arrowRec = new Rectangle(900, 500, 30, 30);
                 Rectangle arrowRec2 = new Rectangle(100, 500, 30, 30);
+                Rectangle arrowRec3 = new Rectangle(550, 100, 30, 30);
+                Rectangle arrowRec4 = new Rectangle(550, 900, 30, 30);
 
 
                 if (heroRec.IntersectsWith(arrowRec) && enemyList.Count == 0)
@@ -214,21 +211,64 @@ namespace Time_Blast
                 {
                     if (room == 1)
                     {
+
+
                         //set new room and reset character position
                         room = 0;
                         Hero.x = 850;
                         Hero.y = 500;
                     }
+                    if (room == 2)
+                    {
+
+
+                        //set new room and reset character position
+                        room = 1;
+                        Hero.x = 850;
+                        Hero.y = 500;
+                    }
+                    if (room == 3)
+                    {
+
+
+                        //set new room and reset character position
+                        room = 2;
+                        Hero.x = 850;
+                        Hero.y = 500;
+                    }
+                }
+
+                if (heroRec.IntersectsWith(arrowRec3) && enemyList.Count == 0 && room == 2)
+                {
+                    room = 4;
+                    //set new room and reset character position
+                    room = 3;
+                    Hero.x = 600;
+                    Hero.y = 100;
+                    Enemy enemy1 = new Enemy(Enemy.x, Enemy.y, heroSize);
+                    Enemy enemy2 = new Enemy(Enemy.x2, Enemy.y2, heroSize);
+                    enemyList.Add(enemy1);
+                    enemyList.Add(enemy2);
+                    Enemy.x = 600;
+                    Enemy.y = 600;
+                    Enemy.x2 = 700;
+                    Enemy.y2 = 600;
+                }
+
+                if (heroRec.IntersectsWith(arrowRec4) && enemyList.Count == 0 && room == 4)
+                {
+                    room = 2;
+                    //set new room and reset character position
+                    room = 3;
+                    Hero.x = 600;
+                    Hero.y = 100;
                 }
             }
         
-
-
             if (heroRec.IntersectsWith(objectiveRec) && enemyList.Count == 0)
             {
                 gameTimer.Stop();
                 winLabel.Visible = true;
-
             }
 
 
@@ -363,6 +403,7 @@ namespace Time_Blast
             //Draws Objective
             e.Graphics.FillRectangle(objectiveBrush, 600, 600, 20, 20);
 
+
             //fills next room arrow
             e.Graphics.FillRectangle(objectiveBrush, 900, 500, 30, 30);
 
@@ -370,6 +411,16 @@ namespace Time_Blast
             {
                 //fills back room arrow
                 e.Graphics.FillRectangle(objectiveBrush, 100, 500, 30, 30);
+            }
+            if (room == 2)
+            {
+                //fills back room arrow
+                e.Graphics.FillRectangle(objectiveBrush, 550, 100, 30, 30);
+            }
+            if (room == 4)
+            {
+                //fills back room arrow
+                e.Graphics.FillRectangle(objectiveBrush, 550, 900, 30, 30);
             }
         }
 

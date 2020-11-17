@@ -11,8 +11,8 @@ namespace Time_Blast
         public static int counter = 0;
 
         public static int x, y, enemyHealth;
-        public static int x2, y2, enemyHealth2;
-        public static int x3, y3, enemyHealth3;
+        public static int x2, y2;
+        public static int x3, y3;
 
         public Enemy(int _x, int _y, int _enemyHealth)
         {
