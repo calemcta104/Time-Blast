@@ -31,65 +31,44 @@ namespace Time_Blast
                 heroImage = gameScreen.wildWestHeroUpLeft;
                 faceUp = true;
                 faceLeft = true;
-                gameScreen.heroSize = 70;
             }
             else if (moveUp == true && moveRight == true)
             {
                 heroImage = gameScreen.wildWestHeroUpRight;
                 faceUp = true;
                 faceRight = true;
-                gameScreen.heroSize = 70;
             }
             else if (moveDown == true && moveLeft == true)
             {
                 heroImage = gameScreen.wildWestHeroDownLeft;
                 faceDown = true;
                 faceLeft = true;
-                gameScreen.heroSize = 70;
             }
             else if (moveDown == true && moveRight == true)
             {
                 heroImage = gameScreen.wildWestHeroDownRight;
                 faceRight = true;
                 faceDown = true;
-                gameScreen.heroSize = 70;
             }
             else if (moveUp == true)
             {
                 heroImage = gameScreen.wildWestHeroUp;
                 faceUp = true;
-                faceDown = false;
-                faceLeft = false;
-                faceRight = false;
-                gameScreen.heroSize = 50;
             }
             else if (moveDown == true)
             {
                 heroImage = gameScreen.wildWestHeroDown;
                 faceDown = true;
-                faceUp = false;
-                faceLeft = false;
-                faceRight = false;
-                gameScreen.heroSize = 50;
             }
             else if (moveLeft == true)
             {
                 heroImage = gameScreen.wildWestHeroLeft;
                 faceLeft = true;
-                faceUp = false;
-                faceDown = false;
-                faceRight = false;
-
-                gameScreen.heroSize = 50;
             }
             else if (moveRight == true)
             {
                 heroImage = gameScreen.wildWestHeroRight;
                 faceRight = true;
-                faceUp = false;
-                faceDown = false;
-                faceLeft = false;
-                gameScreen.heroSize = 50;
             }
 
             if (moveUp == true && y >= 0)
