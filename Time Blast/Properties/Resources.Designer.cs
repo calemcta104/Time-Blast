@@ -323,9 +323,9 @@ namespace Time_Blast.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Kraken {
+        internal static System.Drawing.Bitmap MuralArt {
             get {
-                object obj = ResourceManager.GetObject("Kraken", resourceCulture);
+                object obj = ResourceManager.GetObject("MuralArt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -333,9 +333,9 @@ namespace Time_Blast.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MuralArt {
+        internal static System.Drawing.Bitmap NavyUpperRight {
             get {
-                object obj = ResourceManager.GetObject("MuralArt", resourceCulture);
+                object obj = ResourceManager.GetObject("NavyUpperRight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
